@@ -46,9 +46,25 @@ The Distributed Meditation Network is an open registry of peer meditation groups
 
 ## Getting Involved
 
-- **Join a node** - Find one in the [directory](docs/directory.html)
-- **Start a node** - Follow the [getting started guide](docs/getting-started.md)
-- **Contribute** - Improve tools, docs, or propose protocol changes
+### Want to Practice?
+
+- 🗺️ **[Find a node near you](https://reyblueroller.github.io/meditation-network/)** - Browse the directory
+- 🧘 **[Contact Sydney Node 001](https://github.com/reyblueroller/meditation-network/discussions/new?category=node-inquiries)** - Join or visit
+
+### Want to Start a Node?
+
+- 🌱 **[Get help starting a node](https://github.com/reyblueroller/meditation-network/discussions/new?category=starting-a-node)** - We'll support you
+- 📖 **[Read getting started guide](./docs/getting-started.md)** - Step-by-step process
+
+### Have Questions?
+
+- 💬 **[Join discussions](https://github.com/reyblueroller/meditation-network/discussions)** - Ask anything
+- ❓ **[Read FAQ](./docs/faq.md)** - Common questions
+
+### Contribute
+
+- **Improve tools** - Submit PRs for generator, timer, docs
+- **Share feedback** - Use GitHub Discussions or Issues
 - **Spread the word** - Share with meditation communities
 
 ## Repository Structure
