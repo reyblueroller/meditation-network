@@ -1,0 +1,72 @@
+name: "📍 Register a New Node"
+description: "Self-initiate a new local, virtual, or hybrid node in the network."
+title: "[NODE]: [City/Region Name]"
+labels: ["new-node", "pending-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Welcome to the Network.
+        By filling out this form, you are self-initiating a stabilization node. 
+        Once submitted, a peer will help merge your details into the `nodes.json` directory.
+  - type: input
+    id: location
+    attributes:
+      label: "Node Location"
+      description: "Where is this node physically located? (e.g. London, UK or 'Virtual Only')"
+      placeholder: "e.g. Sydney, Australia"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Connection Type"
+      description: "How do peers join this node?"
+      options:
+        - Physical (In-person)
+        - Virtual (Online)
+        - Hybrid (Both)
+    validations:
+      required: true
+  - type: input
+    id: schedule
+    attributes:
+      label: "Schedule"
+      description: "Day and time of the weekly pulse (include Timezone)."
+      placeholder: "e.g. Tuesdays at 19:00 AEST"
+    validations:
+      required: true
+  - type: dropdown
+    id: flavor
+    attributes:
+      label: "Protocol Flavor"
+      description: "Which version of the Heart Protocol will this node primarily use?"
+      options:
+        - Universal (Relatable/Standard)
+        - Bridge (Virtual/Hybrid)
+        - Systems (Science/Technical)
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: "Contact or Link"
+      description: "Link to your Node's thread in GitHub Discussions or a joining link (Discord/Zoom)."
+      placeholder: "https://github.com/reyblueroller/meditation-network/discussions/..."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Additional Info"
+      description: "Any specific instructions for peers joining your node? (e.g. 'Meet by the fountain')"
+      placeholder: "Optional details about your specific node..."
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Self-Initiation Confirmation"
+      options:
+        - label: "I understand that this node is peer-led and follows the open-source Heart Protocol."
+          required: true
+        - label: "I will maintain this node's status by updating the network if the schedule changes."
+          required: true
