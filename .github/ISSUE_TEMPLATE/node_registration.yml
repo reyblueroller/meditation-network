@@ -47,6 +47,18 @@ body:
         - Systems (Science/Technical)
     validations:
       required: true
+  - type: dropdown
+    id: node_type
+    attributes:
+      label: Node Environment
+      description: Where will the pulse be held?
+      options:
+        - Private Residence (Invite Only)
+        - Community Hall (Public)
+        - Public Park (Weather Permitting)
+        - Virtual / Online
+    validations:
+      required: true
   - type: input
     id: contact
     attributes:

@@ -1,34 +1,39 @@
-# 📋 Facilitator's Checklist: Running a Node Pulse
+# 📋 Micro-Node Facilitator Checklist
+*Guidance for Home Nodes and Community Shared Spaces*
 
-To ensure frequency consistency across the global network, every node operator should follow this 5-step process.
+This checklist is designed for "Micro-Nodes"—small groups meeting in living rooms, backyards, or rented community halls. The goal is to keep the overhead low and the connection high.
 
 ---
 
-### 1. Prepare the Space
-* **Location:** Find a quiet, stable location (physical or virtual).
-* **Audio Setup:** Test your Bluetooth speaker or audio output.
-* **Offline Mode:** Ensure you have the latest **Heart Protocol v1.0** audio file downloaded to your device so the pulse isn't interrupted by buffering or connection drops.
+### 1. Preparing the Space
+* **Home Nodes:** Clear a central circle in your living room. Move furniture to the edges so everyone can sit at the same level.
+* **Community Halls:** If renting, arrive 15 minutes early to set the "Field." Low lighting or a simple centerpiece helps ground the room.
+* **Neutrality:** Ensure the space is free from distractions (turn off TVs, silence kitchen appliances, and alert housemates of the 30-minute quiet window).
 
-### 2. Initialize the Node
-* **The Arrival:** 5 minutes before the pulse begins, welcome arriving peers.
-* **The Framing:** Remind the group: *"We are a peer-led node. There are no gurus here. We are simply holding space for collective stability."*
-* **Silence Devices:** Ask everyone to set their phones to 'Do Not Disturb' or airplane mode.
+### 2. The "Shared Stewardship" Model (Costs)
+If you are renting a hall or providing tea/supplies, use the peer-sharing model:
+* **Transparency:** Total Rent ÷ Number of Participants = Suggested Contribution.
+* **The Jar:** Place a small container by the entrance. 
+* **Non-Profit:** Remind peers that this is a "cost-recovery" model, not a commercial service. We share the space, we share the cost.
 
-### 3. Activate the Protocol
-* **Start the Audio:** Play the 30-minute **Relatable Voice** track.
-* **Presence:** As the facilitator, participate fully. Your nervous system is a primary component of the local field.
-* **Contingency:** If technical issues occur, simply maintain the silence. The field is held by the shared intent, not just the sound.
+### 3. Technical Calibration
+* **Central Audio:** Place a single 360° Bluetooth speaker in the **exact center** of the circle on the floor. 
 
-### 4. Grounding & Closing
-* **Integration:** Once the audio finishes, allow for 1–2 minutes of natural, unguided transition.
-* **Gratitude:** Briefly thank the peers for their contribution to the global network.
-* **Continuity:** Mention the next scheduled pulse time for your node.
+* **Offline First:** Always play the **Heart Protocol v1.0** from a downloaded file.
+* **The "Silent Pulse" Fix:** Ensure your device volume is at 100% and use the *speaker's* physical buttons to adjust the room volume. This prevents many speakers from entering "Auto-Sleep" during the 10-minute silence.
 
-### 5. Submit Field Report
-* **Log Data:** Open the [🌱 Field Reports](https://github.com/reyblueroller/meditation-network/discussions/categories/field-reports) category on GitHub.
-* **Report:** Submit your data (Participant count, Field Quality, and Observations).
-* **Impact:** This step is vital—it turns your local session into visible data for the 2027 Roadmap.
+### 4. Running the Session
+* **The Framing:** Open with: *"We are a peer-led node. We are here to stabilize our local field. There are no gurus here; we are simply holding space together."*
+* **Device Silence:** Ask everyone to set phones to **Airplane Mode**. In a small room, one notification vibration can be felt by the whole group.
+* **The Transition:** Once the 30-minute track ends, allow 2 minutes of "Social Silence." Let people emerge at their own pace.
+
+### 5. Grounding & Reporting
+* **Clean Up:** If in a shared hall, ensure the space is returned to its original state as a gesture of respect for the community.
+* **Field Report:** Post a brief update to your **Node Issue** on GitHub:
+    * *Participants:* (e.g., 4 peers)
+    * *Environment:* (e.g., Home Node, quiet)
+    * *Field Quality:* (e.g., Stable/Coherent)
 
 ---
 > [!TIP]
-> **Consistency is Key.** It is better to have a small, stable 2-person node that meets every week than a large 20-person node that meets sporadically.
+> **Start Small.** A consistent node of 3 neighbors is more powerful for the 2027 Roadmap than a large group that only meets once.
