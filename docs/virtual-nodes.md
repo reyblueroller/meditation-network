@@ -127,7 +127,7 @@ Example: https://meet.jit.si/dmn-sydney-001
 ### 4. Timer Options
 
 **Option A: Screen share timer**
-- Use [DMN session timer](../tools/session-timer/)
+- Use [DMN session timer](session-timer.html)
 - Share your screen
 - Participants mute and watch
 
@@ -366,7 +366,7 @@ If you regularly have 8+ people:
 
 ## Resources
 
-- **[Session Timer Tool](../tools/session-timer/)** - Web-based timer
+- **[Session Timer Tool](session-timer.html)** - Web-based timer
 - **[Jitsi Meet](https://meet.jit.si)** - Free video platform
 - **[Heart Protocol](heart-protocol.md)** - Core practice
 - **[Getting Started](getting-started.md)** - General node setup

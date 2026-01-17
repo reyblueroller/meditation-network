@@ -236,7 +236,7 @@ See [Virtual Nodes Guide](virtual-nodes.md) for detailed virtual setup.
 ## Resources
 
 - **[Heart Protocol](heart-protocol.md)** - Core practice details
-- **[Session Timer](../tools/session-timer/)** - Timing tool
+- **[Session Timer](session-timer.html)** - Timing tool
 - **[FAQ](faq.md)** - Common questions
 - **[Virtual Nodes](virtual-nodes.md)** - Online setup guide
 

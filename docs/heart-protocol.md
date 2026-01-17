@@ -84,7 +84,7 @@ Nodes may adapt:
 
 ## Session Coordination
 
-- Use shared timer (see [session-timer tool](../tools/session-timer/))
+- Use shared timer (see [session-timer tool](session-timer.html))
 - Optional: one person rings bells (rotating role)
 - Optional: minimal verbal guidance (rotating role)
 - Keep guidance to bare minimum - this is peer practice

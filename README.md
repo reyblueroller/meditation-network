@@ -19,7 +19,7 @@
 - **[Getting Started](docs/getting-started.md)** - Join or create a node
 - **[Heart Protocol](docs/heart-protocol.md)** - Core meditation practice
 - **[FAQ](docs/faq.md)** - Common questions
-- **[Session Timer](tools/session-timer/index.html)** - Synchronized meditation timer
+- **[Session Timer](docs/session-timer.html)** - Synchronized meditation timer
 
 ## What is DMN?
 
