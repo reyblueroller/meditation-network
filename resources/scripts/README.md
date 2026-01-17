@@ -66,9 +66,43 @@ Guidelines for contributions:
 
 Submit via pull request.
 
-## Current Scripts
+## Available Scripts
 
-*None yet - this is a placeholder for community contributions*
+### Complete Session (60 minutes)
+
+**Guided portions (20 minutes total):**
+- [00-grounding-5min.md](00-grounding-5min.md) - Body and breath awareness
+- [01-self-compassion-15min.md](01-self-compassion-15min.md) - Heart activation with metta phrases
+
+**Optional extended practices:**
+- [02-loved-ones-15min.md](02-loved-ones-15min.md) - Extending compassion to others
+- [03-difficult-person-15min.md](03-difficult-person-15min.md) - Advanced practice (optional)
+
+**Silent integration:**
+- [99-silent-integration-30min.md](99-silent-integration-30min.md) - Facilitator guide for 30-min silence
+
+### Session Structures
+
+**Standard 60-minute session:**
+1. Grounding (5 min) - guided
+2. Self-compassion (15 min) - guided
+3. Silent integration (30 min) - bells only
+4. Sharing circle (10 min) - optional
+
+**Alternative structures:**
+- Grounding + Loved Ones + Silence
+- Grounding + Self-Compassion + Difficult Person + Silence
+- Just bells and silence (advanced groups)
+
+### Production-Ready
+
+All scripts include:
+- Exact timing breakdowns
+- Pause markers for audio production
+- Production notes (tone, pace, volume)
+- Adaptation guidelines
+
+See [PRODUCTION-GUIDE.md](../audio/PRODUCTION-GUIDE.md) for creating audio versions.
 
 ## Philosophy
 

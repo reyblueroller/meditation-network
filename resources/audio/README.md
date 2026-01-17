@@ -54,16 +54,41 @@ To add audio resources:
 4. Update this README with description
 5. Submit pull request
 
+## Production Guide
+
+See **[PRODUCTION-GUIDE.md](PRODUCTION-GUIDE.md)** for complete instructions on creating audio sessions from the meditation scripts.
+
+Topics covered:
+- Text-to-speech services (ElevenLabs, Google Cloud TTS)
+- Recording your own voice
+- Mixing audio in Audacity
+- Adding music and bells
+- Creating complete session files
+- Quality checklist
+
 ## Current Resources
 
-*None yet - this is a placeholder for community contributions*
+**Guides available:**
+- [PRODUCTION-GUIDE.md](PRODUCTION-GUIDE.md) - Complete audio production tutorial
+
+**Scripts for audio production:**
+- Located in [../scripts/](../scripts/) directory
+- Production-ready with timing markers
+- Ready for TTS or voice recording
 
 ### How to Use
 
-- Download desired audio files
-- Use with session timer
-- Share screen with audio during virtual sessions
-- Or practice in complete silence
+**Option 1: Create your own audio**
+1. Follow the [PRODUCTION-GUIDE.md](PRODUCTION-GUIDE.md)
+2. Use scripts from [../scripts/](../scripts/)
+3. Mix with Audacity or Python script
+4. Export session MP3 files
+
+**Option 2: Practice without audio**
+- Use session timer only
+- Ring bells manually
+- Practice in complete silence
+- Many groups prefer this
 
 ## Philosophy
 
