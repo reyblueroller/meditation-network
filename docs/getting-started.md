@@ -89,8 +89,9 @@ cp nodes/template/node-template.yaml nodes/[country]/[city]/[your-node-id].yaml
 5. Wait for review (usually 24-48 hours)
 
 **Don't use GitHub?**
-- Email your node details to: registry@meditation.network
-- We'll create the YAML file and submit on your behalf
+- Open an issue on the GitHub repository with your node details
+- Someone from the community can create the YAML file and submit on your behalf
+- Or ask in GitHub Discussions for help
 
 #### 4. Spread the Word Locally
 
