@@ -1,64 +1,40 @@
-# Distributed Meditation Network (DMN)
+# 🌐 Distributed Meditation Network (DMN)
 
-> **The open-source operating system for collective human resonance.**
+> **The open-source operating system for planetary coherence.**
 
-The DMN is a decentralized infrastructure movement. We provide the protocols and the coordination layer for peers to establish autonomous "stabilization nodes" across the planet. We have moved beyond the era of gurus and top-down hierarchies into a model of shared, peer-led coherence.
-
----
-
-## 🌐 Network Dashboard
-- **[📍 Find a Node](https://github.com/reyblueroller/meditation-network/discussions/categories/node-coordination)** – Connect with existing local or virtual practices.
-- **[🚀 Register a Node](https://github.com/reyblueroller/meditation-network/issues/new?template=node_registration.yml)** – Self-initiate a new stabilization point in your city.
-- **[🔊 Get the Audio](https://github.com/reyblueroller/meditation-network/tree/main/protocols/audio)** – Download the AI-synchronized "Relatable Peer" protocols.
+The DMN is a decentralized, peer-to-peer infrastructure designed to stabilize the human collective field. We provide the protocols and coordination tools for autonomous "stabilization nodes" to activate across the globe.
 
 ---
 
-## 🟢 The Mission
-Our goal is to stabilize the human collective field. By practicing the same **Heart Protocol** at the same time across different nodes, we create a distributed mesh network of calm and coherence.
-
-### Why Infrastructure?
-Old models of spiritual growth are fragile. By using open-source protocols and GitHub-based coordination, the DMN is resilient, transparent, and belongs to no one but the peers who show up.
-
----
-
-## 🛠 The Three Frequencies
-We operate on three functional layers to ensure systemic stability:
-
-1. **Structure (Andromedan):** The P2P architecture and open-source protocols.
-2. **Heart (Pleiadean):** The grounded compassion generated within the 30-minute practice.
-3. **Field (Arcturian):** The collective resonance that bridges nodes across space and time.
-
-
+## ⚡️ Quick Start
+- **[📍 Find a Node](https://github.com/reyblueroller/meditation-network/discussions/categories/node-coordination)** – Connect with local or virtual practice threads.
+- **[🚀 Register a Node](https://github.com/reyblueroller/meditation-network/issues/new?template=node_registration.yml)** – Official self-initiation for new physical or digital nodes.
+- **[🔊 Get the Protocol](https://github.com/reyblueroller/meditation-network/blob/infrastructure/protocols/scripts/universal.md)** – Access the AI-synchronized "Relatable Peer" scripts.
+- **[📝 Submit Field Report](https://github.com/reyblueroller/meditation-network/discussions/new?category=field-reports)** – Log your session data after a pulse.
 
 ---
 
-## 🕊 The Heart Protocol (v1.0)
-Every node runs a standard 30-minute session. We use AI-generated audio with a **"Relatable Peer"** voice to ensure consistency and remove the ego of a central teacher.
+## 🟢 The Mission: 2027 Pulse
+We are currently in the **Infrastructure Phase**. Our goal is to establish a resilient mesh network of 100+ nodes leading up to the **March 20, 2027 (Spring Equinox)** global synchronization event.
 
-- **Zero Barrier:** No special training needed.
-- **Neutral:** No religious or complex jargon.
-- **Plug-and-Play:** Facilitators simply play the audio for the group.
-
----
-
-## 🔒 Privacy & Sovereignty
-To protect our peers, all coordination happens here on **GitHub**.
-- **No Data Mining:** We avoid proprietary social media and chat apps.
-- **Self-Initiated:** There is no "leader" to join. You align with the mission and initiate your own participation.
-- **No Pledges:** We do not require oaths or obligations. You show up because the practice supports your own stability.
+### Why Peer-to-Peer?
+Traditional models rely on central figures. The DMN uses **Shared Protocols** and **GitHub Coordination** to ensure that if one node goes offline, the network remains stable. You are not "joining" a group; you are "initializing" a node.
 
 ---
 
-## 📅 Roadmap: The 2027 Pulse
-We are currently in the **Foundation Phase**.
-- **2026:** Establishing the first 100 autonomous nodes.
-- **March 20, 2027 (Spring Equinox):** The first **Global Synchronous Pulse**. All nodes will activate the protocol simultaneously to demonstrate planetary coherence.
+## 🛠 Repository Structure
+- **`/.github`**: Contains the logic for node registration and field reporting.
+- **`/protocols`**: The core "Operating System" scripts and audio guidance.
+- **`/docs`**: Technical guides for facilitators and audio setup.
 
 ---
 
-## 👋 Get Involved
-1. **Explore:** Read the [Getting Started Guide](./docs/getting-started.md).
-2. **Listen:** Sample the [Audio Protocols](./protocols/audio).
-3. **Initiate:** Open a [New Node Issue](https://github.com/reyblueroller/meditation-network/issues/new?template=node_registration.yml) to put your location on the map.
+## 👋 How to Contribute
+1. **Host:** Download the script, grab a Bluetooth speaker, and start a local node.
+2. **Research:** Help us refine the science of coherence in the [Research Category](https://github.com/reyblueroller/meditation-network/discussions/categories/research).
+3. **Code:** Improve our node mapping or automation tools.
 
 **The network is forming. The field is stable. Welcome home.**
+
+---
+_Maintaining Node 000_
