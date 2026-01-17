@@ -27,3 +27,4 @@ Thumbs.db
 # Generated files
 docs/directory.html
 docs/nodes.json
+tools/node-directory/package-lock.json
