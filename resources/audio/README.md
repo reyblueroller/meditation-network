@@ -1,99 +1,138 @@
 # Audio Resources
 
-Optional audio resources for meditation sessions.
-
-## Purpose
-
-This directory can contain:
-- Bell sounds for session timing
-- Optional guided audio for Heart Protocol phases
-- Background ambient sounds (if desired)
-
-## Guidelines
-
-### What Belongs Here
-
-**Appropriate:**
-- Simple bell/chime sounds
-- Basic verbal phase guidance (minimal, optional)
-- Ambient nature sounds (optional)
-
-**Not appropriate:**
-- Spiritual teachings or lectures
-- Music with lyrics
-- Guided visualizations beyond Heart Protocol
-- Anything that creates dependency on audio
-
-### File Formats
-
-- **Preferred**: MP3, OGG (web-compatible)
-- **Also acceptable**: WAV, FLAC
-- Keep file sizes reasonable (< 5MB when possible)
-
-### Licensing
-
-Only contribute audio that is:
-- Your own creation
-- Public domain
-- CC0 or compatible Creative Commons license
-- Explicitly permitted for redistribution
-
-Include license information with each file.
-
-## Usage
-
-Audio resources are **completely optional**. The Heart Protocol works perfectly well in silence with just a simple timer.
-
-## Contributing
-
-To add audio resources:
-
-1. Ensure file meets licensing requirements
-2. Add file to appropriate subdirectory
-3. Include `LICENSE.txt` or attribution
-4. Update this README with description
-5. Submit pull request
-
-## Production Guide
-
-See **[PRODUCTION-GUIDE.md](PRODUCTION-GUIDE.md)** for complete instructions on creating audio sessions from the meditation scripts.
-
-Topics covered:
-- Text-to-speech services (ElevenLabs, Google Cloud TTS)
-- Recording your own voice
-- Mixing audio in Audacity
-- Adding music and bells
-- Creating complete session files
-- Quality checklist
-
-## Current Resources
-
-**Guides available:**
-- [PRODUCTION-GUIDE.md](PRODUCTION-GUIDE.md) - Complete audio production tutorial
-
-**Scripts for audio production:**
-- Located in [../scripts/](../scripts/) directory
-- Production-ready with timing markers
-- Ready for TTS or voice recording
-
-### How to Use
-
-**Option 1: Create your own audio**
-1. Follow the [PRODUCTION-GUIDE.md](PRODUCTION-GUIDE.md)
-2. Use scripts from [../scripts/](../scripts/)
-3. Mix with Audacity or Python script
-4. Export session MP3 files
-
-**Option 2: Practice without audio**
-- Use session timer only
-- Ring bells manually
-- Practice in complete silence
-- Many groups prefer this
-
-## Philosophy
-
-Audio is a tool, not a requirement. The practice is accessible without any resources beyond a timer. These are conveniences, not dependencies.
+This directory contains guides for producing DMN meditation session audio files.
 
 ---
 
-**Silence is always an option.**
+## Available Guides
+
+### 📖 [Production Guide](./PRODUCTION-GUIDE.md)
+**Complete workflow for creating session audio:**
+- Text-to-speech options (ElevenLabs, Google, free alternatives)
+- Recording yourself (equipment, Audacity setup)
+- Mixing audio layers (voice + music + frequencies + bells)
+- Export settings and file formats
+- Step-by-step for complete 60-minute session
+
+**Start here if you're creating audio for the first time.**
+
+---
+
+### 🎵 [Beneficial Frequencies](./BENEFICIAL-FREQUENCIES.md)
+**Optional enhancement - embedding healing frequencies:**
+- Binaural beats (Schumann 7.83 Hz, Theta 5 Hz)
+- Solfeggio frequencies (528 Hz for heart activation)
+- How to generate with Audacity or Python
+- Mixing instructions and volume levels
+- Research background and safety guidelines
+
+**This is OPTIONAL** - sessions work fine without frequencies. Add this once you're comfortable with basic audio production.
+
+---
+
+### 🎼 [Music Recommendations](../music/MUSIC-RECOMMENDATIONS.md)
+**Open-source background music:**
+- Recommended sources (Incompetech, Free Music Archive, etc.)
+- Specific tracks for each session phase
+- Licensing and attribution requirements
+- How to download and use
+
+**Cross-reference:** Music is a component in the production workflow.
+
+---
+
+## Quick Start
+
+**For your first session audio (Jan 24, 2026):**
+
+1. **Read:** [Production Guide](./PRODUCTION-GUIDE.md)
+2. **Get music:** [Music Recommendations](../music/MUSIC-RECOMMENDATIONS.md)
+3. **Get scripts:** [Meditation Scripts](../meditation-scripts/)
+4. **Create:** Basic session (voice + music + bells)
+5. **Optional:** Add [frequencies](./BENEFICIAL-FREQUENCIES.md) later
+
+**Don't overcomplicate it** - start with voice + music, add enhancements over time.
+
+---
+
+## File Organization
+
+**Recommended structure for your audio files:**
+```
+resources/audio/
+├── PRODUCTION-GUIDE.md          ← How to create audio
+├── BENEFICIAL-FREQUENCIES.md    ← Optional frequency enhancement
+├── session-files/               ← Your created session audio
+│   ├── 00-grounding-5min.mp3
+│   ├── 01-self-compassion-15min.mp3
+│   ├── 02-loved-ones-15min.mp3
+│   ├── 03-difficult-person-15min.mp3
+│   └── 99-silent-30min.mp3
+├── voice-recordings/            ← Raw voice files
+├── music-tracks/                ← Downloaded background music
+├── frequencies/                 ← Generated frequency tracks
+└── bells/                       ← Bell sounds
+```
+
+**Note:** Don't commit large audio files to Git. Use Git LFS or host them separately (Google Drive, Internet Archive, etc.).
+
+---
+
+## Audio Production Workflow Summary
+
+**Complete session creation:**
+
+1. **Generate/record voice** (TTS or microphone)
+2. **Download music** (from open-source sources)
+3. **Generate frequencies** (optional - Audacity or Python)
+4. **Mix in Audacity:**
+   - Layer 1: Bell (opening)
+   - Layer 2: Music (-20 to -24dB)
+   - Layer 3: Frequency (-35 to -40dB, optional)
+   - Layer 4: Voice (0dB, normalized)
+   - Layer 5: Bells (transitions, -6dB)
+5. **Export as MP3** (192 kbps)
+6. **Test playback**
+7. **Use in session**
+
+**Detailed instructions in [Production Guide](./PRODUCTION-GUIDE.md).**
+
+---
+
+## Quality Checklist
+
+Before using audio in sessions:
+
+- [ ] Voice clear and audible
+- [ ] Music not too loud (can easily hear voice)
+- [ ] No pops, clicks, or artifacts
+- [ ] Proper fade in/out
+- [ ] Bells at correct moments
+- [ ] Pauses appropriate length
+- [ ] Total duration correct (±5 sec acceptable)
+- [ ] Volume normalized (not too quiet/loud)
+- [ ] Exported as 192 kbps MP3 minimum
+
+---
+
+## Support
+
+**Questions about audio production?**
+- Ask in [Discussions → General](https://github.com/reyblueroller/meditation-network/discussions)
+- Check the detailed guides above
+- Share your learnings in [Field Reports](https://github.com/reyblueroller/meditation-network/discussions/categories/field-reports)
+
+---
+
+## Contributing
+
+**Have better audio files?**
+- Share techniques in discussions
+- Contribute improvements to guides
+- Upload sample files (if high quality and properly licensed)
+
+**Remember:** All audio must use open-source music and proper attribution.
+
+---
+
+*Last updated: January 2026*
