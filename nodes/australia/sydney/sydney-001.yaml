@@ -1,0 +1,51 @@
+id: sydney-001
+
+name: "Sydney Harbor Meditation Node"
+
+type: physical
+
+status: active
+
+location:
+  country: "Australia"
+  city: "Sydney"
+  region: "New South Wales"
+  timezone: "Australia/Sydney"
+  address: "Circular Quay area, near harbor"
+  coordinates:
+    lat: -33.8688
+    lon: 151.2093
+
+schedule:
+  sessions:
+    - day: "Wednesday"
+      time: "18:30"
+      duration: 60
+
+    - day: "Sunday"
+      time: "08:00"
+      duration: 90
+
+  notes: "Sunday sessions sometimes move to nearby park in good weather."
+
+contact:
+  email: "sydney001@meditation.network"
+  signal: "+61400000000"
+  notes: "Contact via email or Signal. Please reach out before first session."
+
+details:
+  established: 2026
+  size: "3-6 people"
+  languages:
+    - "English"
+  accessibility: "Venue has stairs, working on accessible alternative"
+  notes: "Peaceful space overlooking harbor. BYO meditation cushion or use chairs provided. All experience levels welcome."
+
+protocol:
+  heart_protocol: true
+  peer_structure: true
+  no_fees: true
+
+registered:
+  date: "2026-01-17"
+  github_user: "dmn-contributor"
