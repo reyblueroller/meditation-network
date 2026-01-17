@@ -1,0 +1,47 @@
+title: "[REPORT]: [Date] - [Node ID]"
+labels: ["field-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📊 Pulse Field Report
+        Thank you for holding the space. Please share the details of your latest session to help us monitor the network's collective resonance.
+  - type: input
+    id: node-id
+    attributes:
+      label: "Node ID / Location"
+      placeholder: "e.g., DMN-001 / Sydney"
+    validations:
+      required: true
+  - type: input
+    id: participants
+    attributes:
+      label: "Participant Count"
+      description: "How many peers joined this pulse (Physical + Virtual)?"
+      placeholder: "e.g., 12"
+    validations:
+      required: true
+  - type: dropdown
+    id: field-quality
+    attributes:
+      label: "Field Quality"
+      description: "How would you describe the resonance of the room/connection?"
+      options:
+        - Deep/Stable
+        - Emerging/Developing
+        - Challenging/Distracted
+    validations:
+      required: true
+  - type: textarea
+    id: observations
+    attributes:
+      label: "Observations"
+      description: "Any specific insights, technical issues, or 'synchronicity' noted during the 30-minute pulse?"
+      placeholder: "Shared silence was very deep today..."
+  - type: checkboxes
+    id: completion
+    attributes:
+      label: "Protocol Verification"
+      options:
+        - label: "We used the standard AI-Synchronized Audio for the full 30 minutes."
+          required: true
