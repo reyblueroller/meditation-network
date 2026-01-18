@@ -1,0 +1,188 @@
+{{ define "main" }}
+<section class="hero">
+    <h1>{{ .Site.Title }}</h1>
+    <p class="subtitle">{{ .Site.Params.description }}</p>
+    <p class="vision">Think Global • Start Small • Build Together</p>
+    <p class="tagline">{{ .Site.Params.tagline }}</p>
+</section>
+
+<section class="status-banner">
+    <div class="status-grid">
+        <div class="status-item">
+            <span class="status-label">STATUS:</span>
+            <span class="status-value">Alpha (Pre-Launch)</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">PHASE:</span>
+            <span class="status-value">Infrastructure Development</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">LAUNCH:</span>
+            <span class="status-value">January 24, 2026</span>
+        </div>
+    </div>
+</section>
+
+<section class="vision-reality">
+    <h2>How It Works</h2>
+    
+    <div class="two-column">
+        <div class="vision-col">
+            <h3>🌍 The Vision</h3>
+            <p><strong>Global distributed network for consciousness evolution</strong></p>
+            <ul>
+                <li>50+ nodes by March 2027</li>
+                <li>500+ nodes by 2030</li>
+                <li>Quarterly global synchronizations</li>
+                <li>Planetary infrastructure operational</li>
+            </ul>
+        </div>
+        
+        <div class="reality-col">
+            <h3>🔨 The Reality</h3>
+            <p><strong>One person starting solo</strong></p>
+            <ul>
+                <li>Week 1: Solo practice (testing protocol)</li>
+                <li>Month 3-6: Find first members (hopefully)</li>
+                <li>Year 1: First stable node</li>
+                <li>Year 2-5: Others replicate globally</li>
+            </ul>
+        </div>
+    </div>
+    
+    <p class="center-text"><strong>Not hiding that this is Day 1. Building in public. Documenting the journey.</strong></p>
+</section>
+
+<section class="current-nodes">
+    <h2>Active Nodes</h2>
+    
+    <p class="center-text" style="margin-bottom: 2rem;">
+        <a href="/nodes/" style="color: var(--color-accent); font-weight: 600;">
+            View Full Node Directory →
+        </a>
+    </p>
+
+    <div class="stats">
+        <div class="stat">
+            <span class="number">{{ len .Site.Data.nodes }}</span>
+            <span class="label">Node{{ if ne (len .Site.Data.nodes) 1 }}s{{ end }}</span>
+        </div>
+    </div>
+    
+    <div class="nodes-list">
+        {{ range .Site.Data.nodes }}
+        <div class="node-card status-{{ .status }}">
+            <h3>{{ .name }}</h3>
+            <p class="node-location">📍 {{ .location.city }}, {{ .location.country }}</p>
+            <p class="node-status">Status: <span class="badge">{{ .status }}</span></p>
+            <p class="node-schedule">{{ .schedule.day }} {{ .schedule.time }} ({{ .schedule.timezone }})</p>
+            <p class="node-format">Format: {{ .format | title }}</p>
+            {{ if .notes }}
+            <p class="node-notes">{{ .notes }}</p>
+            {{ end }}
+            <a href="{{ .contact.url }}" class="button">Contact Node</a>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<section class="two-lenses">
+    <h2>Two Perspectives, Same Infrastructure</h2>
+    
+    <div class="two-column">
+        <div class="lens-card">
+            <h3>🔬 Evidence-Based</h3>
+            <p>Research, systems thinking, measurable outcomes</p>
+            <ul>
+                <li>Distributed architecture</li>
+                <li>Heart-brain coherence research</li>
+                <li>Peer structure benefits</li>
+                <li>Open-source methodology</li>
+            </ul>
+            <a href="{{ "/docs/mission/" | relURL }}" class="button">Read Mission</a>
+        </div>
+        
+        <div class="lens-card">
+            <h3>✨ Consciousness-Based</h3>
+            <p>Heart activation, planetary evolution, soul mission</p>
+            <ul>
+                <li>Starseed coalition (Andromedan/Pleiadean/Arcturian)</li>
+                <li>March 2027 timing significance</li>
+                <li>Soul mission recognition</li>
+                <li>Consciousness infrastructure</li>
+            </ul>
+            <a href="{{ "/docs/deeper-purpose/" | relURL }}" class="button">Read Deeper Purpose</a>
+        </div>
+    </div>
+    
+    <p class="center-text">Same protocols. Different languages. <a href="{{ "/docs/comparison/" | relURL }}">See how they align →</a></p>
+</section>
+
+<section class="get-involved">
+    <h2>Get Involved</h2>
+    
+    <div class="three-column">
+        <div class="cta-card">
+            <h3>🧘 Join Sydney Node 001</h3>
+            <p>Be a founding member of the first node</p>
+            <p class="detail">Mondays 7pm, Northern Beaches<br>Starting January 24, 2026</p>
+            <a href="https://github.com/reyblueroller/meditation-network/discussions/categories/node-inquiries" class="button">Contact Node</a>
+        </div>
+        
+        <div class="cta-card">
+            <h3>🌱 Start Your Own Node</h3>
+            <p>Launch peer meditation in your city</p>
+            <p class="detail">Protocols ready. Documentation complete.<br>Fork and build.</p>
+            <a href="{{ "/docs/getting-started/" | relURL }}" class="button">Get Started</a>
+        </div>
+        
+        <div class="cta-card">
+            <h3>💻 Contribute Code</h3>
+            <p>Help build the infrastructure</p>
+            <p class="detail">Tools, docs, protocols, research<br>Open-source development</p>
+            <a href="{{ .Site.Params.github }}" class="button">View GitHub</a>
+        </div>
+    </div>
+</section>
+
+<section class="start-small">
+    <h2>How Movements Start</h2>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <span class="timeline-time">Week 1</span>
+            <span class="timeline-desc">One person, alone, practicing</span>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-time">Week 4</span>
+            <span class="timeline-desc">Maybe one other joins</span>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-time">Week 12</span>
+            <span class="timeline-desc">Small group (2-5 people)</span>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-time">Month 6</span>
+            <span class="timeline-desc">Stable node established</span>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-time">Year 1</span>
+            <span class="timeline-desc">Node helping others start</span>
+        </div>
+    </div>
+    
+    <p class="center-text"><strong>Sydney started with one person. Your city can too.</strong></p>
+    
+    <div class="start-contexts">
+        <h3>Start Where You Are</h3>
+        <div class="contexts-grid">
+            <div>🏠 <strong>Family:</strong> You + partner + kids</div>
+            <div>👥 <strong>Friends:</strong> Small trusted circle</div>
+            <div>💼 <strong>Workplace:</strong> Lunch meditation crew</div>
+            <div>🏘️ <strong>Neighborhood:</strong> Local community</div>
+            <div>🌐 <strong>Virtual:</strong> Global connections</div>
+            <div>🧘 <strong>Solo:</strong> Just you (valid node!)</div>
+        </div>
+    </div>
+</section>
+{{ end }}

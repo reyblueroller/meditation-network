@@ -1,0 +1,35 @@
+{{ define "main" }}
+<article class="page-content">
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+        <p class="page-description">{{ .Description }}</p>
+    </header>
+    
+    <div class="content">
+        <div id="timer-app"></div>
+        
+        <div style="margin-top: 3rem; padding: 1.5rem; background: var(--color-bg-alt); border-radius: 0.5rem;">
+            <h2>How to Use</h2>
+            <ol>
+                <li><strong>Choose session length:</strong> 30, 45, or 60 minutes</li>
+                <li><strong>Click Start:</strong> Timer begins, showing current phase</li>
+                <li><strong>Visual cues:</strong> Progress bar and phase indicators</li>
+                <li><strong>Audio bell:</strong> Chimes at each phase transition</li>
+                <li><strong>Pause/Resume:</strong> If needed during session</li>
+            </ol>
+            
+            <h3>Session Structure (45-min)</h3>
+            <ul>
+                <li><strong>0:00-5:00</strong> - Grounding (body, breath, heart)</li>
+                <li><strong>5:00-20:00</strong> - Heart Activation (compassion practice)</li>
+                <li><strong>20:00-40:00</strong> - Silent Integration</li>
+                <li><strong>40:00-45:00</strong> - Closing (gentle return)</li>
+            </ul>
+            
+            <p><a href="/docs/heart-protocol/">Read full Heart Protocol →</a></p>
+        </div>
+    </div>
+</article>
+
+<script src="/js/timer.js"></script>
+{{ end }}

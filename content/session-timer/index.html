@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditation Session Timer - DMN</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+
+    .subtitle {
+      font-size: 1.1em;
+      opacity: 0.9;
+      margin-bottom: 40px;
+    }
+
+    .timer-display {
+      font-size: 6em;
+      font-weight: 200;
+      margin: 40px 0;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.05em;
+    }
+
+    .phase-display {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+      opacity: 0.95;
+      min-height: 2.5em;
+    }
+
+    .controls {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid white;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    button.primary {
+      background: white;
+      color: #667eea;
+    }
+
+    button.primary:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .presets {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .preset-btn {
+      padding: 10px 20px;
+      font-size: 0.95em;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      margin: 30px 0;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: white;
+      width: 0%;
+      transition: width 1s linear;
+    }
+
+    .settings {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .setting-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    input[type="number"] {
+      padding: 8px 12px;
+      font-size: 1em;
+      border: 2px solid white;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      width: 80px;
+      text-align: center;
+    }
+
+    input[type="number"]::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 50px;
+      opacity: 0.7;
+      font-size: 0.9em;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      .timer-display { font-size: 4em; }
+      .phase-display { font-size: 1.4em; }
+      button { padding: 12px 24px; font-size: 1em; }
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Heart Protocol Timer</h1>
+    <p class="subtitle">Distributed Meditation Network</p>
+
+    <div class="presets">
+      <button class="preset-btn" onclick="loadPreset(60)">60 min</button>
+      <button class="preset-btn" onclick="loadPreset(90)">90 min</button>
+      <button class="preset-btn" onclick="loadPreset(30)">30 min (Short)</button>
+      <button class="preset-btn" onclick="toggleSettings()">Custom ⚙️</button>
+    </div>
+
+    <div id="settings" class="settings hidden">
+      <h3 style="margin-bottom: 20px;">Custom Session</h3>
+      <div class="setting-row">
+        <label>Settling (min):</label>
+        <input type="number" id="settling" value="5" min="1" max="30">
+      </div>
+      <div class="setting-row">
+        <label>Heart Focus (min):</label>
+        <input type="number" id="heartFocus" value="20" min="5" max="60">
+      </div>
+      <div class="setting-row">
+        <label>Compassion (min):</label>
+        <input type="number" id="compassion" value="25" min="5" max="90">
+      </div>
+      <div class="setting-row">
+        <label>Integration (min):</label>
+        <input type="number" id="integration" value="5" min="1" max="30">
+      </div>
+      <div class="setting-row">
+        <label>Closing (min):</label>
+        <input type="number" id="closing" value="5" min="1" max="30">
+      </div>
+      <div class="setting-row">
+        <label>Sound notifications:</label>
+        <input type="checkbox" id="soundEnabled" checked>
+      </div>
+      <button onclick="applyCustom()" style="margin-top: 15px;">Apply Custom</button>
+    </div>
+
+    <div class="timer-display" id="timeDisplay">--:--</div>
+    <div class="phase-display" id="phaseDisplay">Select a session duration</div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressBar"></div>
+    </div>
+
+    <div class="controls">
+      <button class="primary" id="startBtn" onclick="startTimer()">Start</button>
+      <button id="pauseBtn" onclick="pauseTimer()" disabled>Pause</button>
+      <button id="resetBtn" onclick="resetTimer()">Reset</button>
+    </div>
+
+    <div class="footer">
+      <p>
+        <a href="../../README.md">About DMN</a> |
+        <a href="../../docs/heart-protocol.md">Heart Protocol</a> |
+        <a href="../../docs/getting-started.md">Get Started</a>
+      </p>
+      <p style="margin-top: 10px;">No gurus, no hierarchy, no fees</p>
+    </div>
+  </div>
+
+  <script>
+    // Session structure
+    const PRESETS = {
+      60: [
+        { name: 'Settling', duration: 5 },
+        { name: 'Heart Focus', duration: 20 },
+        { name: 'Compassion Expansion', duration: 25 },
+        { name: 'Integration', duration: 5 },
+        { name: 'Closing', duration: 5 }
+      ],
+      90: [
+        { name: 'Settling', duration: 5 },
+        { name: 'Heart Focus', duration: 20 },
+        { name: 'Compassion Expansion', duration: 50 },
+        { name: 'Integration', duration: 5 },
+        { name: 'Closing', duration: 10 }
+      ],
+      30: [
+        { name: 'Settling', duration: 3 },
+        { name: 'Heart Focus', duration: 10 },
+        { name: 'Compassion Expansion', duration: 12 },
+        { name: 'Integration', duration: 3 },
+        { name: 'Closing', duration: 2 }
+      ]
+    };
+
+    let currentSession = null;
+    let currentPhaseIndex = 0;
+    let secondsRemaining = 0;
+    let totalSeconds = 0;
+    let timerInterval = null;
+    let isPaused = false;
+    let soundEnabled = true;
+
+    // Audio context for bell sounds
+    let audioContext = null;
+
+    function toggleSettings() {
+      const settings = document.getElementById('settings');
+      settings.classList.toggle('hidden');
+    }
+
+    function loadPreset(duration) {
+      resetTimer();
+      currentSession = PRESETS[duration];
+      totalSeconds = currentSession.reduce((sum, phase) => sum + (phase.duration * 60), 0);
+      currentPhaseIndex = 0;
+      secondsRemaining = currentSession[0].duration * 60;
+      updateDisplay();
+      document.getElementById('phaseDisplay').textContent = `${duration} minute session ready`;
+      document.getElementById('startBtn').disabled = false;
+    }
+
+    function applyCustom() {
+      resetTimer();
+      currentSession = [
+        { name: 'Settling', duration: parseInt(document.getElementById('settling').value) },
+        { name: 'Heart Focus', duration: parseInt(document.getElementById('heartFocus').value) },
+        { name: 'Compassion Expansion', duration: parseInt(document.getElementById('compassion').value) },
+        { name: 'Integration', duration: parseInt(document.getElementById('integration').value) },
+        { name: 'Closing', duration: parseInt(document.getElementById('closing').value) }
+      ];
+      soundEnabled = document.getElementById('soundEnabled').checked;
+      totalSeconds = currentSession.reduce((sum, phase) => sum + (phase.duration * 60), 0);
+      currentPhaseIndex = 0;
+      secondsRemaining = currentSession[0].duration * 60;
+      updateDisplay();
+      document.getElementById('phaseDisplay').textContent = `Custom ${Math.round(totalSeconds/60)} minute session ready`;
+      document.getElementById('startBtn').disabled = false;
+      toggleSettings();
+    }
+
+    function startTimer() {
+      if (!currentSession) return;
+
+      document.getElementById('startBtn').disabled = true;
+      document.getElementById('pauseBtn').disabled = false;
+      isPaused = false;
+
+      playBell(); // Opening bell
+
+      timerInterval = setInterval(() => {
+        if (!isPaused) {
+          secondsRemaining--;
+
+          if (secondsRemaining <= 0) {
+            // Move to next phase
+            currentPhaseIndex++;
+
+            if (currentPhaseIndex >= currentSession.length) {
+              // Session complete
+              playBell(3); // Three bells for completion
+              clearInterval(timerInterval);
+              document.getElementById('phaseDisplay').textContent = 'Session Complete';
+              document.getElementById('startBtn').disabled = false;
+              document.getElementById('pauseBtn').disabled = true;
+              return;
+            }
+
+            // Start next phase
+            secondsRemaining = currentSession[currentPhaseIndex].duration * 60;
+            playBell(2); // Two bells for phase transition
+          }
+
+          updateDisplay();
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      isPaused = !isPaused;
+      document.getElementById('pauseBtn').textContent = isPaused ? 'Resume' : 'Pause';
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      isPaused = false;
+      currentPhaseIndex = 0;
+
+      if (currentSession) {
+        secondsRemaining = currentSession[0].duration * 60;
+      } else {
+        secondsRemaining = 0;
+      }
+
+      document.getElementById('startBtn').disabled = currentSession === null;
+      document.getElementById('pauseBtn').disabled = true;
+      document.getElementById('pauseBtn').textContent = 'Pause';
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      const minutes = Math.floor(secondsRemaining / 60);
+      const seconds = secondsRemaining % 60;
+      document.getElementById('timeDisplay').textContent =
+        `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+      if (currentSession) {
+        document.getElementById('phaseDisplay').textContent =
+          currentSession[currentPhaseIndex].name;
+
+        // Update progress bar
+        const elapsed = totalSeconds - (
+          currentSession.slice(currentPhaseIndex).reduce((sum, phase) =>
+            sum + (phase.duration * 60), 0
+          ) - (currentSession[currentPhaseIndex].duration * 60 - secondsRemaining)
+        );
+        const progress = (elapsed / totalSeconds) * 100;
+        document.getElementById('progressBar').style.width = `${progress}%`;
+      }
+    }
+
+    function playBell(count = 1) {
+      if (!soundEnabled) return;
+
+      // Initialize audio context on first user interaction
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+
+      let bellsPlayed = 0;
+      const playOneBell = () => {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+
+        oscillator.frequency.value = 528; // C note, soothing frequency
+        oscillator.type = 'sine';
+
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 2);
+
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 2);
+
+        bellsPlayed++;
+        if (bellsPlayed < count) {
+          setTimeout(playOneBell, 1000);
+        }
+      };
+
+      playOneBell();
+    }
+
+    // Initialize
+    document.getElementById('timeDisplay').textContent = '--:--';
+  </script>
+</body>
+</html>

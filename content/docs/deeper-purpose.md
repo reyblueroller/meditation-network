@@ -1,9 +1,9 @@
 # DMN: Deeper Purpose
 
 > **Two perspectives available:**
-> - **[Evidence-Based Mission](./MISSION.md):** Research, systems, measurable outcomes
+> - **[Evidence-Based Mission](../mission):** Research, systems, measurable outcomes
 > - **This document:** Consciousness evolution, heart activation, timing significance
-> - **[See integration](./COMPARISON.md):** How both perspectives align
+> - **[See integration](../comparison):** How both perspectives align
 > 
 > *Read what resonates. Both describe the same infrastructure.*
 
@@ -499,28 +499,10 @@ Maybe you don't know yet.
 **This document presents consciousness-based perspective.**
 
 **For complementary view:**
-- [Evidence-Based Mission](./MISSION.md) - Research, systems, data
-- [Integration Framework](./COMPARISON.md) - How both perspectives align
-- [Framework Diagram](./assets/dmn-framework.md) - Visual integration
+- [Evidence-Based Mission](../mission) - Research, systems, data
+- [Integration Framework](../comparison) - How both perspectives align
 
 **Both are true. Both matter. Read what serves you.**
-
----
-
-## Next Steps
-
-**Ready to practice?**
-- [Find a node](https://reyblueroller.github.io/meditation-network/) - Browse active nodes
-- [Contact Sydney Node 001](https://github.com/reyblueroller/meditation-network/discussions/categories/node-inquiries) - Join or visit
-
-**Ready to start a node?**
-- [Getting Started Guide](./getting-started.md) - Step-by-step process
-- [Ask Questions](https://github.com/reyblueroller/meditation-network/discussions/categories/starting-a-node) - We'll support you
-
-**Want to understand more?**
-- [Heart-Centered Protocol](./heart-protocol.md) - Practice details
-- [FAQ](./faq.md) - Common questions
-- [Research References](./MISSION.md#research-foundations) - Scientific backing
 
 ---
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DMN // Metatron Static Base</title>
+    <style>
+        body { 
+            margin: 0; 
+            background: #02050a; /* Deep Andromeda space */
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            overflow: hidden;
+        }
+        canvas { border: 1px solid rgba(0, 210, 255, 0.2); }
+    </style>
+</head>
+<body>
+
+<canvas id="metatronCanvas"></canvas>
+
+<script>
+    const canvas = document.getElementById('metatronCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Set canvas size
+    canvas.width = 600;
+    canvas.height = 600;
+    
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 150; // Distance to outer nodes
+    const nodeRadius = 5;
+
+    // 1. Calculate the 13 Nodes
+    const nodes = [];
+    
+    // The Center Node (Node 0)
+    nodes.push({ x: centerX, y: centerY });
+
+    // The 6 Inner and 6 Outer Nodes
+    for (let i = 0; i < 6; i++) {
+        let angle = (i * Math.PI) / 3; // 60 degree increments
+        
+        // Inner ring (distance is half the radius)
+        nodes.push({
+            x: centerX + Math.cos(angle) * (radius / 2),
+            y: centerY + Math.sin(angle) * (radius / 2)
+        });
+        
+        // Outer ring
+        nodes.push({
+            x: centerX + Math.cos(angle) * radius,
+            y: centerY + Math.sin(angle) * radius
+        });
+    }
+
+    // 2. Draw all 78 Connection Lines
+    ctx.strokeStyle = 'rgba(0, 210, 255, 0.3)';
+    ctx.lineWidth = 1;
+    
+    for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+        }
+    }
+
+    // 3. Draw the Nodes (The "Stars")
+    nodes.forEach(node => {
+        ctx.fillStyle = '#00d2ff';
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = '#00d2ff';
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, nodeRadius, 0, Math.PI * 2);
+        ctx.fill();
+    });
+</script>
+</body>
+</html>

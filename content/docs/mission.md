@@ -2,8 +2,8 @@
 
 **Two perspectives available:**
 - **This document:** Evidence-based, research-focused, systems thinking
-- **[Deeper Purpose](./DEEPER-PURPOSE.md):** Consciousness evolution, spiritual framing
-- **[See integration](./COMPARISON.md):** How both perspectives align
+- **[Deeper Purpose](../deeper-purpose):** Consciousness evolution, spiritual framing
+- **[See integration](../comparison):** How both perspectives align
 
 *Read what resonates. Both describe the same work.*
 
@@ -325,8 +325,8 @@ DMN provides open-source infrastructure for peer meditation groups.
 **This document presents evidence-based perspective.**
 
 **For complementary view:**
-- [Consciousness-Based Purpose](./DEEPER-PURPOSE.md)
-- [Integration Framework](./COMPARISON.md)
+- [Consciousness-Based Purpose](../deeper-purpose)
+- [Integration Framework](../comparison)
 
 **Both describe the same work. Read what resonates.**
 

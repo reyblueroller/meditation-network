@@ -1,0 +1,25 @@
+- id: sydney-001
+  name: "Sydney Node 001"
+  status: forming
+  location:
+    city: "Sydney"
+    region: "Northern Beaches"
+    country: "Australia"
+    latitude: -33.7969
+    longitude: 151.2840
+  format: physical
+  schedule:
+    day: "Mondays"
+    time: "7:00-7:45 PM"
+    timezone: "Australia/Sydney"
+    frequency: "Weekly"
+  contact:
+    type: github_discussions
+    url: "https://github.com/reyblueroller/meditation-network/discussions/categories/node-inquiries"
+    category: "node-inquiries"
+    label: "sydney-001"
+  languages:
+    - English
+  founding_date: "2026-01-24"
+  founding_members: 1
+  notes: "First node. Solo bootstrap phase. Testing protocols."

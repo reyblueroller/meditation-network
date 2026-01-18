@@ -1,0 +1,39 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-section">
+                <h3>{{ .Site.Title }}</h3>
+                <p>{{ .Site.Params.description }}</p>
+                <p class="tagline">{{ .Site.Params.tagline }}</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Documentation</h4>
+                <nav class="footer-nav">
+                    <a href="{{ "/docs/mission/" | relURL }}">Mission (Evidence)</a>
+                    <a href="{{ "/docs/deeper-purpose/" | relURL }}">Deeper Purpose</a>
+                    <a href="{{ "/docs/heart-protocol/" | relURL }}">Protocol</a>
+                    <a href="{{ "/docs/faq/" | relURL }}">FAQ</a>
+                </nav>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Get Involved</h4>
+                <nav class="footer-nav">
+                    <a href="{{ "/docs/getting-started/" | relURL }}">Start a Node</a>
+                    <a href="{{ .Site.Params.github }}/discussions">Discussions</a>
+                    <a href="{{ .Site.Params.github }}">GitHub</a>
+                    <a href="{{ "/docs/about/" | relURL }}">About</a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built by practitioners, for practitioners. Open-source forever.</p>
+            <p>
+                <a href="{{ "/docs/about/" | relURL }}">About the Builder</a> | 
+                <a href="mailto:{{ .Site.Params.contact }}">Contact</a>
+            </p>
+        </div>
+    </div>
+</footer>

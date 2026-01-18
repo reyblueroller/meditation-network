@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Getting Started - Distributed Meditation Network</title>
+    
+    <meta name="description" content="Join an existing node or start your own">
+    <meta name="author" content="DMN Community">
+    
+    
+    <meta property="og:title" content="Getting Started">
+    <meta property="og:description" content="Join an existing node or start your own">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:1313/docs/getting-started/">
+    
+    <link rel="canonical" href="http://localhost:1313/docs/getting-started/">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <h1 class="site-title">
+                <a href="/">Distributed Meditation Network</a>
+            </h1>
+            
+            <nav class="site-nav">
+                
+                <a href="/nodes/">Nodes</a>
+                
+                <a href="/docs/mission/">Mission</a>
+                
+                <a href="/timer/">Timer</a>
+                
+                <a href="/docs/getting-started/">Start a Node</a>
+                
+                <a href="/docs/about/">About</a>
+                
+                <a href="https://github.com/reyblueroller/meditation-network/discussions">Discussions</a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+    
+    <main class="container">
+        
+<article class="page-content">
+    <header class="page-header">
+        <h1>Getting Started</h1>
+        
+        <p class="page-description">Join an existing node or start your own</p>
+        
+    </header>
+    
+    <div class="content">
+        <h1 id="getting-started-with-dmn">Getting Started with DMN</h1>
+<p>Two ways to participate in the Distributed Meditation Network:</p>
+<hr>
+<h2 id="option-1-join-an-existing-node">Option 1: Join an Existing Node</h2>
+<p><strong>See if there&rsquo;s a node near you:</strong></p>
+<p>👉 <strong><a href="/nodes/">View Node Directory</a></strong></p>
+<p><strong>How to join:</strong></p>
+<ol>
+<li><strong>Find your local node</strong> in the <a href="/nodes/">directory</a></li>
+<li><strong>Click &ldquo;Contact Node&rdquo;</strong> - opens GitHub Discussion</li>
+<li><strong>Introduce yourself</strong> - Brief intro, why you&rsquo;re interested</li>
+<li><strong>Attend first session</strong> - Coordinator will respond with details</li>
+</ol>
+<p><strong>What to expect:</strong></p>
+<ul>
+<li>Weekly 45-minute sessions (typically evenings)</li>
+<li>5-15 people per node (small groups)</li>
+<li>Peer-led (rotating facilitators, no teacher)</li>
+<li>Free forever (no fees)</li>
+<li>Heart-centered compassion meditation</li>
+</ul>
+<hr>
+<h2 id="option-2-start-your-own-node">Option 2: Start Your Own Node</h2>
+<p><strong>No node in your area? Start one.</strong></p>
+<h3 id="step-1-solo-practice-weeks-1-4">Step 1: Solo Practice (Weeks 1-4)</h3>
+<p>Before inviting others, practice the protocol yourself.</p>
+<p><strong>Why solo first?</strong></p>
+<ul>
+<li>Understand the practice before facilitating</li>
+<li>Test timing and flow</li>
+<li>Build confidence</li>
+<li>Ensure commitment</li>
+</ul>
+<p><strong>How to practice solo:</strong></p>
+<ol>
+<li>
+<p><strong>Read the <a href="/docs/heart-protocol/">Heart Protocol</a></strong></p>
+</li>
+<li>
+<p><strong>Download meditation scripts:</strong></p>
+<ul>
+<li><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts">Grounding (5 min)</a></li>
+<li><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts">Heart practice (15 min)</a> - Rotate weekly: self-compassion, loved ones, gratitude</li>
+<li><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts">Silent integration (20 min)</a></li>
+<li><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts">Closing (5 min)</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Practice weekly</strong> - Same day/time each week (builds habit)</p>
+</li>
+<li>
+<p><strong>Take notes</strong> - What works, what doesn&rsquo;t, timing adjustments</p>
+</li>
+<li>
+<p><strong>Complete 4 sessions minimum</strong> before inviting others</p>
+</li>
+</ol>
+<p><strong>Optional:</strong> Create audio recordings (see <a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/audio">Audio Production Guide</a>)</p>
+<hr>
+<h3 id="step-2-register-your-node-week-4">Step 2: Register Your Node (Week 4)</h3>
+<p><strong>When ready to open to others:</strong></p>
+<ol>
+<li>
+<p><strong>Fork the repo:</strong> <a href="https://github.com/reyblueroller/meditation-network">meditation-network on GitHub</a></p>
+</li>
+<li>
+<p><strong>Create node YAML file:</strong></p>
+</li>
+</ol>
+<pre tabindex="0"><code>   Location: nodes/[country]/[city]/[city]-001.yaml
+   Example: nodes/australia/melbourne/melbourne-001.yaml
+</code></pre><ol start="3">
+<li><strong>Node file template:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>   - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">yourcity-001</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Your City Node 001&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">status</span>: <span style="color:#ae81ff">forming</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">location</span>:
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">city</span>: <span style="color:#e6db74">&#34;Your City&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">region</span>: <span style="color:#e6db74">&#34;State/Province&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">country</span>: <span style="color:#e6db74">&#34;Country&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">latitude</span>: <span style="color:#ae81ff">0.0000</span>    <span style="color:#75715e"># Get from Google Maps</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">longitude</span>: <span style="color:#ae81ff">0.0000</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">format</span>: <span style="color:#ae81ff">physical     </span> <span style="color:#75715e"># or &#34;virtual&#34; or &#34;hybrid&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">schedule</span>:
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">day</span>: <span style="color:#e6db74">&#34;Wednesdays&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">time</span>: <span style="color:#e6db74">&#34;7:00 PM&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">timezone</span>: <span style="color:#e6db74">&#34;Your/Timezone&#34;</span>  <span style="color:#75715e"># e.g. America/New_York</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">frequency</span>: <span style="color:#e6db74">&#34;Weekly&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">contact</span>:
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">type</span>: <span style="color:#ae81ff">github_discussions</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">url</span>: <span style="color:#e6db74">&#34;https://github.com/reyblueroller/meditation-network/discussions/categories/node-inquiries&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">category</span>: <span style="color:#e6db74">&#34;node-inquiries&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#34;yourcity-001&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">languages</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">English</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">founding_date</span>: <span style="color:#e6db74">&#34;2026-03-01&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">founding_members</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">notes</span>: <span style="color:#e6db74">&#34;Just launched. Testing protocols. All welcome.&#34;</span>
+</span></span></code></pre></div><ol start="4">
+<li><strong>Submit pull request</strong></li>
+<li><strong>Node appears in directory</strong> within 24-48 hours</li>
+</ol>
+<hr>
+<h3 id="step-3-find-members-weeks-5-8">Step 3: Find Members (Weeks 5-8)</h3>
+<p><strong>How to find your first members:</strong></p>
+<p><strong>Local outreach:</strong></p>
+<ul>
+<li>Post flyer at yoga studios, meditation centers, community boards</li>
+<li>Create Meetup.com event</li>
+<li>Visit local meditation/wellness spaces</li>
+<li>Coffee shops, libraries, coworking spaces</li>
+</ul>
+<p><strong>Online outreach:</strong></p>
+<ul>
+<li>Reddit: r/meditation, r/yourcity</li>
+<li>Local Facebook groups</li>
+<li>Your personal network (if comfortable)</li>
+<li>Discord meditation communities</li>
+</ul>
+<p><strong>Message template:</strong></p>
+<pre tabindex="0"><code>Starting peer meditation group in [City].
+
+- Weekly [Day] evenings, 45 minutes
+- Heart-centered practice, no experience needed
+- Free forever, peer-led (no teacher)
+- Based on open-source DMN protocols
+
+First session: [Date/Time/Location]
+Info: [link to your node in directory]
+
+Questions? Reply or DM.
+</code></pre><p><strong>Realistic expectations:</strong></p>
+<ul>
+<li>You&rsquo;ll reach 100+ people to get 5 responses</li>
+<li>5 responses = 2-3 actual attendees</li>
+<li>2-3 attendees = success!</li>
+<li>Growth takes 3-6 months</li>
+</ul>
+<p><strong>Where to post:</strong></p>
+<ul>
+<li>One post per platform (don&rsquo;t spam)</li>
+<li>Be genuine, not salesy</li>
+<li>Offer value (free practice space)</li>
+<li>Respond to questions quickly</li>
+</ul>
+<hr>
+<h3 id="step-4-first-group-session-week-9">Step 4: First Group Session (Week 9+)</h3>
+<p><strong>When you have 2+ people committed:</strong></p>
+<p><strong>Preparation (day before):</strong></p>
+<ol>
+<li>Confirm time/location (send reminder)</li>
+<li>Test audio/tech setup</li>
+<li>Prepare space (cushions, chairs, timer)</li>
+<li>Review facilitation notes</li>
+</ol>
+<p><strong>Session structure:</strong></p>
+<p><strong>7:00-7:05 - Arrival &amp; Introduction (5 min)</strong></p>
+<ul>
+<li>Welcome as people arrive</li>
+<li>Brief intro (first-timers only):
+<ul>
+<li>&ldquo;45-minute heart-centered meditation&rdquo;</li>
+<li>&ldquo;Structure: grounding, heart practice, silence, closing&rdquo;</li>
+<li>&ldquo;No experience needed, just follow along&rdquo;</li>
+<li>&ldquo;Optional sharing after&rdquo;</li>
+</ul>
+</li>
+</ul>
+<p><strong>7:05-7:50 - Practice (45 min)</strong></p>
+<ul>
+<li>Press play on audio (or read scripts)</li>
+<li>Participate yourself (don&rsquo;t just observe)</li>
+<li>No talking during practice</li>
+<li>Keep time precisely</li>
+</ul>
+<p><strong>7:50-8:00 - Closing &amp; Optional Sharing (10 min)</strong></p>
+<ul>
+<li>Allow silence after bell</li>
+<li>Open for brief sharing (not required)</li>
+<li>Confirm next week&rsquo;s session</li>
+<li>Exchange contact info if new members</li>
+</ul>
+<p><strong>First session tips:</strong></p>
+<ul>
+<li>Start exactly on time (respect schedules)</li>
+<li>Don&rsquo;t over-explain (practice speaks for itself)</li>
+<li>Participate fully (you&rsquo;re peer, not teacher)</li>
+<li>Keep sharing brief (2-3 min per person max)</li>
+<li>End on time</li>
+</ul>
+<hr>
+<h3 id="step-5-sustain--grow-weeks-10">Step 5: Sustain &amp; Grow (Weeks 10+)</h3>
+<p><strong>Building momentum:</strong></p>
+<p><strong>Consistency:</strong></p>
+<ul>
+<li>Same day/time/place weekly</li>
+<li>Cancel only for emergencies</li>
+<li>Even if just 2 people show up</li>
+</ul>
+<p><strong>Facilitation rotation:</strong></p>
+<ul>
+<li>Week 1: You facilitate</li>
+<li>Week 2: Someone else volunteers</li>
+<li>Week 3: Rotate again</li>
+<li>Document who&rsquo;s facilitating next (group chat)</li>
+</ul>
+<p><strong>Communication:</strong></p>
+<ul>
+<li>Create group chat (Signal, WhatsApp, Telegram)</li>
+<li>Weekly reminder (day before session)</li>
+<li>Share resources (scripts, readings)</li>
+<li>Celebrate milestones (Week 12, etc.)</li>
+</ul>
+<p><strong>Documentation:</strong></p>
+<ul>
+<li>Log attendance (spreadsheet)</li>
+<li>Note what worked/didn&rsquo;t</li>
+<li>Track facilitation rotation</li>
+<li>Field reports to DMN (optional)</li>
+</ul>
+<p><strong>Common challenges:</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Challenge</th>
+          <th>Solution</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Attendance fluctuates</td>
+          <td>Normal. Core of 3-5 regulars = success</td>
+      </tr>
+      <tr>
+          <td>People drop out</td>
+          <td>Normal. Focus on who stays</td>
+      </tr>
+      <tr>
+          <td>Scheduling conflicts</td>
+          <td>Offer 2 sessions/week? Or stick to one reliable time</td>
+      </tr>
+      <tr>
+          <td>Facilitator burnout</td>
+          <td>Rotate weekly. Share the load.</td>
+      </tr>
+      <tr>
+          <td>Growth plateaus</td>
+          <td>Patience. Word of mouth takes 6+ months</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Signs of success:</strong></p>
+<ul>
+<li>3-5 people showing up consistently</li>
+<li>People facilitating without being asked</li>
+<li>Organic connection/friendships forming</li>
+<li>Requests to invite friends</li>
+<li>Sessions feel cohesive, not awkward</li>
+</ul>
+<p><strong>Timeline to stability:</strong></p>
+<ul>
+<li><strong>Month 1-2:</strong> Finding rhythm, testing format</li>
+<li><strong>Month 3-4:</strong> Core group stabilizing</li>
+<li><strong>Month 5-6:</strong> Sustainable, self-organizing</li>
+<li><strong>Month 12+:</strong> Helping others start nodes</li>
+</ul>
+<hr>
+<h2 id="resources">Resources</h2>
+<p><strong>Everything you need is open-source:</strong></p>
+<h3 id="core-protocols">Core Protocols</h3>
+<ul>
+<li><strong><a href="/docs/heart-protocol/">Heart Protocol</a></strong> - Complete practice guide</li>
+<li><strong><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts">Meditation Scripts</a></strong> - All sessions</li>
+<li><strong><a href="/docs/faq/">FAQ</a></strong> - Common questions</li>
+</ul>
+<h3 id="audio-production">Audio Production</h3>
+<ul>
+<li><strong><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/audio">Production Guide</a></strong> - How to create session audio</li>
+<li><strong><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/music">Music Recommendations</a></strong> - Open-source background music</li>
+<li><strong><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/audio">Frequency Guide</a></strong> - Optional binaural beats</li>
+</ul>
+<h3 id="philosophy">Philosophy</h3>
+<ul>
+<li><strong><a href="/docs/mission/">Mission (Evidence-Based)</a></strong> - Research perspective</li>
+<li><strong><a href="/docs/deeper-purpose/">Deeper Purpose (Consciousness)</a></strong> - Spiritual perspective</li>
+<li><strong><a href="/docs/comparison/">Integration</a></strong> - How they align</li>
+</ul>
+<hr>
+<h2 id="get-support">Get Support</h2>
+<p><strong>Questions about starting a node?</strong></p>
+<ul>
+<li><strong><a href="https://github.com/reyblueroller/meditation-network/discussions">GitHub Discussions</a></strong> - Community Q&amp;A</li>
+<li><strong>Email:</strong> <a href="mailto:contact@meditation-network.org">contact@meditation-network.org</a></li>
+<li><strong>Existing Node Founders:</strong> Connect via Discussions</li>
+</ul>
+<p><strong>Common questions:</strong></p>
+<ul>
+<li>&ldquo;How do I facilitate if I&rsquo;m not a teacher?&rdquo; → You&rsquo;re not teaching, just holding space. Scripts guide the practice.</li>
+<li>&ldquo;What if only 2 people show up?&rdquo; → That&rsquo;s enough. Quality over quantity.</li>
+<li>&ldquo;What if I don&rsquo;t know how to meditate?&rdquo; → Practice solo for 4 weeks. That&rsquo;s enough.</li>
+<li>&ldquo;What if my node fails?&rdquo; → Most things fail. Document the attempt. Data helps the network.</li>
+</ul>
+<hr>
+<h2 id="quick-start-checklist">Quick Start Checklist</h2>
+<p><strong>Week 1-4: Solo Practice</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Read Heart Protocol</li>
+<li><input disabled="" type="checkbox"> Download scripts</li>
+<li><input disabled="" type="checkbox"> Practice 4 sessions solo</li>
+<li><input disabled="" type="checkbox"> Take notes</li>
+</ul>
+<p><strong>Week 4: Registration</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Fork repo</li>
+<li><input disabled="" type="checkbox"> Create node YAML</li>
+<li><input disabled="" type="checkbox"> Submit PR</li>
+<li><input disabled="" type="checkbox"> Node goes live</li>
+</ul>
+<p><strong>Week 5-8: Outreach</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Post to 3-5 platforms</li>
+<li><input disabled="" type="checkbox"> Create Meetup event</li>
+<li><input disabled="" type="checkbox"> Post 5 flyers locally</li>
+<li><input disabled="" type="checkbox"> Respond to inquiries</li>
+</ul>
+<p><strong>Week 9: First Session</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Confirm 2+ attendees</li>
+<li><input disabled="" type="checkbox"> Prepare space</li>
+<li><input disabled="" type="checkbox"> Run first session</li>
+<li><input disabled="" type="checkbox"> Collect feedback</li>
+</ul>
+<p><strong>Week 10+: Sustain</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Weekly sessions</li>
+<li><input disabled="" type="checkbox"> Rotate facilitation</li>
+<li><input disabled="" type="checkbox"> Build consistency</li>
+<li><input disabled="" type="checkbox"> Document journey</li>
+</ul>
+<hr>
+<h2 id="timeline-summary">Timeline Summary</h2>
+<p><strong>Realistic path to sustainable node:</strong></p>
+<ul>
+<li><strong>Weeks 1-4:</strong> Solo practice</li>
+<li><strong>Week 4:</strong> Register node</li>
+<li><strong>Weeks 5-8:</strong> Find members</li>
+<li><strong>Week 9:</strong> First group session</li>
+<li><strong>Weeks 10-20:</strong> Build consistency</li>
+<li><strong>Month 6:</strong> Stable node (3-5 regulars)</li>
+<li><strong>Month 12:</strong> Self-sustaining, helping others</li>
+</ul>
+<p><strong>Total time: 6-12 months</strong></p>
+<p>That&rsquo;s normal. Infrastructure takes time.</p>
+<hr>
+<h2 id="start-now">Start Now</h2>
+<p><strong>Ready to begin?</strong></p>
+<p><strong>Joining:</strong> <a href="/nodes/">Find a node near you</a></p>
+<p><strong>Starting:</strong> Practice solo for 4 weeks, then register your node.</p>
+<p><strong>Either way, you&rsquo;re building planetary meditation infrastructure.</strong></p>
+<p>Welcome to DMN. 🙏</p>
+<hr>
+<p><strong>Next Steps:</strong></p>
+<ul>
+<li><a href="/docs/heart-protocol/">Read the Heart Protocol</a></li>
+<li><a href="https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts">Browse Meditation Scripts</a></li>
+<li><a href="https://github.com/reyblueroller/meditation-network/discussions">Join Discussions</a></li>
+</ul>
+
+    </div>
+    
+    
+</article>
+
+    </main>
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-section">
+                <h3>Distributed Meditation Network</h3>
+                <p>Open-source infrastructure for peer meditation</p>
+                <p class="tagline">Peer-led • Open-source • Collective coherence</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Documentation</h4>
+                <nav class="footer-nav">
+                    <a href="/docs/mission/">Mission (Evidence)</a>
+                    <a href="/docs/deeper-purpose/">Deeper Purpose</a>
+                    <a href="/docs/heart-protocol/">Protocol</a>
+                    <a href="/docs/faq/">FAQ</a>
+                </nav>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Get Involved</h4>
+                <nav class="footer-nav">
+                    <a href="/docs/getting-started/">Start a Node</a>
+                    <a href="https://github.com/reyblueroller/meditation-network/discussions">Discussions</a>
+                    <a href="https://github.com/reyblueroller/meditation-network">GitHub</a>
+                    <a href="/docs/about/">About</a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built by practitioners, for practitioners. Open-source forever.</p>
+            <p>
+                <a href="/docs/about/">About the Builder</a> | 
+                <a href="mailto:contact@meditation-network.org">Contact</a>
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/docs/deeper-purpose/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/faq/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/heart-protocol/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/mission/</loc>
+  </url><url>
+    <loc>http://localhost:1313/session-timer/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/getting-started/</loc>
+  </url><url>
+    <loc>http://localhost:1313/nodes/</loc>
+  </url><url>
+    <loc>http://localhost:1313/timer/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/comparison/</loc>
+  </url>
+</urlset>
