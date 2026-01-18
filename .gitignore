@@ -1,0 +1,27 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# Old system (not needed)
+/docs/
+/tools/node-directory/node_modules/
+nodes.json
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
