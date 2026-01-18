@@ -11,7 +11,7 @@ disableKinds: ["taxonomy", "term"]
 
 # Permalinks
 permalinks:
-  docs: '/docs/:contentbasename/'
+  docs: '/docs/:filename/'
 
 # Params (custom site variables)
 params:
