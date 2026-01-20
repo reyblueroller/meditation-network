@@ -72,11 +72,11 @@ This isn't anti-teacher. It's pro-peer.
 
 ### How do I find a node near me?
 
-Check the [Node Directory](directory.html). You can search by location, filter by type (physical/virtual), and see session schedules.
+Check the [Node Directory](/nodes/). You can search by location, filter by type (physical/virtual), and see session schedules.
 
 ### What if there's no node in my area?
 
-Start one! See [Getting Started](getting-started.md). You don't need special qualifications - just commitment to the protocol and peer structure.
+Start one! See [Getting Started]({{< ref "getting-started.md" >}}). You don't need special qualifications - just commitment to the protocol and peer structure.
 
 ### Can I visit multiple nodes?
 
@@ -113,7 +113,7 @@ GitHub is used for coordination, not gatekeeping.
 
 Automatically via GitHub Actions. When node YAML files are updated, the directory rebuilds and deploys to GitHub Pages.
 
-See the [node-directory tool](../tools/node-directory/) for technical details.
+
 
 ### Can I use the tools for other purposes?
 

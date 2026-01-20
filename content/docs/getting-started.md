@@ -1,8 +1,3 @@
----
-title: "Getting Started"
-description: "Join an existing node or start your own"
----
-
 # Getting Started with DMN
 
 Two ways to participate in the Distributed Meditation Network:
@@ -47,7 +42,7 @@ Before inviting others, practice the protocol yourself.
 
 **How to practice solo:**
 
-1. **Read the [Heart Protocol](/docs/heart-protocol/)**
+1. **Read the [Heart Protocol]({{< ref "heart-protocol.md" >}})**
 2. **Download meditation scripts:**
    - [Grounding (5 min)](https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts)
    - [Heart practice (15 min)](https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts) - Rotate weekly: self-compassion, loved ones, gratitude
@@ -251,9 +246,9 @@ Questions? Reply or DM.
 **Everything you need is open-source:**
 
 ### Core Protocols
-- **[Heart Protocol](/docs/heart-protocol/)** - Complete practice guide
+- **[Heart Protocol]({{< ref "heart-protocol.md" >}})** - Complete practice guide
 - **[Meditation Scripts](https://github.com/reyblueroller/meditation-network/tree/main/resources/meditation-scripts)** - All sessions
-- **[FAQ](/docs/faq/)** - Common questions
+- **[FAQ]({{< ref "faq.md" >}})** - Common questions
 
 ### Audio Production
 - **[Production Guide](https://github.com/reyblueroller/meditation-network/tree/main/resources/audio)** - How to create session audio
@@ -261,9 +256,9 @@ Questions? Reply or DM.
 - **[Frequency Guide](https://github.com/reyblueroller/meditation-network/tree/main/resources/audio)** - Optional binaural beats
 
 ### Philosophy
-- **[Mission (Evidence-Based)](/docs/mission/)** - Research perspective
-- **[Deeper Purpose (Consciousness)](/docs/deeper-purpose/)** - Spiritual perspective
-- **[Integration](/docs/comparison/)** - How they align
+- **[Mission (Evidence-Based)]({{< ref "mission.md" >}})** - Research perspective
+- **[Deeper Purpose (Consciousness)]({{< ref "deeper-purpose.md" >}})** - Spiritual perspective
+- **[Integration]({{< ref "comparison.md" >}})** - How they align
 
 ---
 

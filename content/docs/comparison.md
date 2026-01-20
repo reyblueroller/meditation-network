@@ -72,9 +72,9 @@ description: "Visual integration of evidence and consciousness views"
 
 Choose the perspective that speaks to you:
 
-**🔬 [Evidence-Based Mission](../mission/)** - Research, distributed systems, collective coherence data
+**🔬 [Evidence-Based Mission]({{< ref "mission.md" >}})** - Research, distributed systems, collective coherence data
 
-**✨ [Consciousness-Based Purpose](../deeper-purpose/)** - Heart activation, soul mission, planetary timing
+**✨ [Consciousness-Based Purpose]({{< ref "deeper-purpose.md" >}})** - Heart activation, soul mission, planetary timing
 
 **Or read both.** They're complementary, not contradictory.
 
@@ -85,14 +85,14 @@ Choose the perspective that speaks to you:
 **Ready to participate?**
 
 - **[Join Sydney Node 001](/)** - First node, launching Jan 24, 2026
-- **[Start Your Own Node](../getting-started/)** - Launch in your city
-- **[Read the Protocol](../heart-protocol/)** - Understand the practice
+- **[Start Your Own Node]({{< ref "getting-started.md" >}})** - Launch in your city
+- **[Read the Protocol]({{< ref "heart-protocol.md" >}})** - Understand the practice
 
 **The framework doesn't matter. The practice does.**
 
 ---
 
 **Related Documentation:**
-- [Heart Protocol](../heart-protocol/)
-- [Getting Started Guide](../getting-started/)
-- [FAQ](../faq/)
+- [Heart Protocol]({{< ref "heart-protocol.md" >}})
+- [Getting Started Guide]({{< ref "getting-started.md" >}})
+- [FAQ]({{< ref "faq.md" >}})

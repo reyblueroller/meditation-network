@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $timerData := index .Site.Data.timer .Site.Language.Lang }}
+
+<div class="timer-page">
+    <h1>{{ $timerData.title }}</h1>
+    <p class="description">{{ $timerData.description }}</p>
+    
+    <div class="timer-app">
+        <!-- Your timer app HTML here -->
+    </div>
+    
+    <section class="features">
+        <h2>{{ i18n "timer_features" }}</h2>
+        <ul>
+            {{ range $timerData.features }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+    </section>
+    
+    <section class="instructions">
+        {{ $timerData.instructions | markdownify }}
+    </section>
+</div>
+{{ end }}

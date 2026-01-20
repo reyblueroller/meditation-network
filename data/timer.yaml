@@ -1,0 +1,39 @@
+en:
+  title: "Session Timer"
+  description: "45-minute meditation session timer"
+  
+es:
+  title: "Temporizador de Sesión"
+  description: "Temporizador de sesión de meditación de 45 minutos"
+
+de:
+  title: "Sitzungs-Timer"
+  description: "45-Minuten Meditationssitzungs-Timer"
+
+fr:
+  title: "Minuteur de Session"
+  description: "Minuteur de session de méditation de 45 minutes"
+
+zh:
+  title: "会话计时器"
+  description: "45分钟冥想会话计时器"
+
+pt:
+  title: "Temporizador de Sessão"
+  description: "Temporizador de sessão de meditação de 45 minutos"
+
+nl:
+  title: "Sessie-timer"
+  description: "45-minuten meditatie sessie-timer"
+
+sv:
+  title: "Sessions-timer"
+  description: "45-minuters meditationssessionstimer"
+
+ja:
+  title: "セッションタイマー"
+  description: "45分間の瞑想セッションタイマー"
+
+hi:
+  title: "सत्र टाइमर"
+  description: "45 मिनट का ध्यान सत्र टाइमर"

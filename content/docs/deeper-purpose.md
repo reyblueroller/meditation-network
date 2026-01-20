@@ -1,9 +1,9 @@
 # DMN: Deeper Purpose
 
 > **Two perspectives available:**
-> - **[Evidence-Based Mission](../mission):** Research, systems, measurable outcomes
+> - **[Evidence-Based Mission]({{< ref "mission.md" >}}):** Research, systems, measurable outcomes
 > - **This document:** Consciousness evolution, heart activation, timing significance
-> - **[See integration](../comparison):** How both perspectives align
+> - **[See integration]({{< ref "comparison.md" >}}):** How both perspectives align
 > 
 > *Read what resonates. Both describe the same infrastructure.*
 
@@ -367,9 +367,9 @@ If you've been searching for YOUR mission and this resonates—
 
 **If you recognize this as YOUR mission:**
 
-1. **Read the protocols** - [Heart Protocol](/docs/heart-protocol/)
+1. **Read the protocols** - [Heart Protocol]({{< ref "heart-protocol.md" >}})
 2. **Practice solo** - 4 weeks minimum, test everything
-3. **Start your node** - [Getting Started Guide](/docs/getting-started/)
+3. **Start your node** - [Getting Started Guide]({{< ref "getting-started.md" >}})
 4. **Document the process** - Field reports help others
 5. **Trust the unfolding** - Universe handles scale
 
@@ -563,8 +563,8 @@ Maybe you don't know yet.
 **This document presents consciousness-based perspective.**
 
 **For complementary view:**
-- [Evidence-Based Mission](../mission) - Research, systems, data
-- [Integration Framework](../comparison) - How both perspectives align
+- [Evidence-Based Mission]({{< ref "mission.md" >}}) - Research, systems, data
+- [Integration Framework]({{< ref "comparison.md" >}}) - How both perspectives align
 
 **Both are true. Both matter. Read what serves you.**
 

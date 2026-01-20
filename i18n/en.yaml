@@ -1,0 +1,224 @@
+# Homepage specific (add to existing file)
+
+# Hero
+- id: homepage_vision
+  translation: "Think Global • Start Small • Build Together"
+
+# Status Banner
+- id: homepage_status_label
+  translation: "STATUS:"
+
+- id: homepage_status_value
+  translation: "Alpha (Pre-Launch)"
+
+- id: homepage_phase_label
+  translation: "PHASE:"
+
+- id: homepage_phase_value
+  translation: "Infrastructure Development"
+
+- id: homepage_launch_label
+  translation: "LAUNCH:"
+
+- id: homepage_launch_value
+  translation: "January 24, 2026"
+
+# Vision vs Reality
+- id: homepage_vision_title
+  translation: "🌍 The Vision"
+
+- id: homepage_vision_subtitle
+  translation: "Global distributed network for consciousness evolution"
+
+- id: homepage_vision_nodes_2027
+  translation: "50+ nodes by March 2027"
+
+- id: homepage_vision_nodes_2030
+  translation: "500+ nodes by 2030"
+
+- id: homepage_vision_sync
+  translation: "Quarterly global synchronizations"
+
+- id: homepage_vision_infra
+  translation: "Planetary infrastructure operational"
+
+- id: homepage_reality_title
+  translation: "🔨 The Reality"
+
+- id: homepage_reality_subtitle
+  translation: "One person starting solo"
+
+- id: homepage_reality_week1
+  translation: "Week 1: Solo practice (testing protocol)"
+
+- id: homepage_reality_month3
+  translation: "Month 3-6: Find first members (hopefully)"
+
+- id: homepage_reality_year1
+  translation: "Year 1: First stable node"
+
+- id: homepage_reality_year2
+  translation: "Year 2-5: Others replicate globally"
+
+- id: homepage_building_public
+  translation: "Not hiding that this is Day 1. Building in public. Documenting the journey."
+
+# Nodes Section
+- id: homepage_nodes_title
+  translation: "Active Nodes"
+
+- id: homepage_view_directory
+  translation: "View Full Node Directory"
+
+- id: homepage_format
+  translation: "Format"
+
+- id: homepage_contact_node
+  translation: "Contact Node"
+
+# Two Lenses
+- id: homepage_lenses_title
+  translation: "Two Perspectives, Same Infrastructure"
+
+- id: homepage_lens_evidence_title
+  translation: "🔬 Evidence-Based"
+
+- id: homepage_lens_evidence_subtitle
+  translation: "Research, systems thinking, measurable outcomes"
+
+- id: homepage_lens_evidence_1
+  translation: "Distributed architecture"
+
+- id: homepage_lens_evidence_2
+  translation: "Heart-brain coherence research"
+
+- id: homepage_lens_evidence_3
+  translation: "Peer structure benefits"
+
+- id: homepage_lens_evidence_4
+  translation: "Open-source methodology"
+
+- id: homepage_lens_consciousness_title
+  translation: "✨ Consciousness-Based"
+
+- id: homepage_lens_consciousness_subtitle
+  translation: "Heart activation, planetary evolution, soul mission"
+
+- id: homepage_lens_consciousness_1
+  translation: "Starseed coalition (Andromedan/Pleiadean/Arcturian)"
+
+- id: homepage_lens_consciousness_2
+  translation: "March 2027 timing significance"
+
+- id: homepage_lens_consciousness_3
+  translation: "Soul mission recognition"
+
+- id: homepage_lens_consciousness_4
+  translation: "Consciousness infrastructure"
+
+- id: homepage_read_mission
+  translation: "Read Mission"
+
+- id: homepage_read_deeper
+  translation: "Read Deeper Purpose"
+
+- id: homepage_lenses_footer
+  translation: "Same protocols. Different languages."
+
+- id: homepage_see_alignment
+  translation: "See how they align"
+
+# Get Involved
+- id: homepage_involved_title
+  translation: "Get Involved"
+
+- id: homepage_join_sydney_title
+  translation: "🧘 Join Sydney Node 001"
+
+- id: homepage_join_sydney_text
+  translation: "Be a founding member of the first node"
+
+- id: homepage_join_sydney_detail
+  translation: "Mondays 7pm, Northern Beaches\nStarting January 24, 2026"
+
+- id: homepage_start_node_title
+  translation: "🌱 Start Your Own Node"
+
+- id: homepage_start_node_text
+  translation: "Launch peer meditation in your city"
+
+- id: homepage_start_node_detail
+  translation: "Protocols ready. Documentation complete.\nFork and build."
+
+- id: homepage_contribute_title
+  translation: "💻 Contribute Code"
+
+- id: homepage_contribute_text
+  translation: "Help build the infrastructure"
+
+- id: homepage_contribute_detail
+  translation: "Tools, docs, protocols, research\nOpen-source development"
+
+- id: homepage_view_github
+  translation: "View GitHub"
+
+# Timeline
+- id: homepage_movements_title
+  translation: "How Movements Start"
+
+- id: homepage_timeline_week1_time
+  translation: "Week 1"
+
+- id: homepage_timeline_week1_desc
+  translation: "One person, alone, practicing"
+
+- id: homepage_timeline_week4_time
+  translation: "Week 4"
+
+- id: homepage_timeline_week4_desc
+  translation: "Maybe one other joins"
+
+- id: homepage_timeline_week12_time
+  translation: "Week 12"
+
+- id: homepage_timeline_week12_desc
+  translation: "Small group (2-5 people)"
+
+- id: homepage_timeline_month6_time
+  translation: "Month 6"
+
+- id: homepage_timeline_month6_desc
+  translation: "Stable node established"
+
+- id: homepage_timeline_year1_time
+  translation: "Year 1"
+
+- id: homepage_timeline_year1_desc
+  translation: "Node helping others start"
+
+- id: homepage_sydney_started
+  translation: "Sydney started with one person. Your city can too."
+
+# Start Contexts
+- id: homepage_start_where_title
+  translation: "Start Where You Are"
+
+- id: homepage_context_family
+  translation: "🏠 **Family:** You + partner + kids"
+
+- id: homepage_context_friends
+  translation: "👥 **Friends:** Small trusted circle"
+
+- id: homepage_context_workplace
+  translation: "💼 **Workplace:** Lunch meditation crew"
+
+- id: homepage_context_neighborhood
+  translation: "🏘️ **Neighborhood:** Local community"
+
+- id: homepage_context_virtual
+  translation: "🌐 **Virtual:** Global connections"
+
+- id: homepage_context_solo
+  translation: "🧘 **Solo:** Just you (valid node!)"
+
+ 

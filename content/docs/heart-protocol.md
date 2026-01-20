@@ -84,7 +84,7 @@ Nodes may adapt:
 
 ## Session Coordination
 
-- Use shared timer (see [session-timer tool](session-timer.html))
+- Use shared timer (see [session-timer tool](/session-timer/))
 - Optional: one person rings bells (rotating role)
 - Optional: minimal verbal guidance (rotating role)
 - Keep guidance to bare minimum - this is peer practice
@@ -112,7 +112,7 @@ Heart-centered compassion practices have research support:
 
 ## Questions
 
-See the [FAQ](faq.md) for common questions about the Heart Protocol.
+See the [FAQ]({{< ref "faq.md" >}}) for common questions about the Heart Protocol.
 
 ---
 

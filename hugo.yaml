@@ -9,19 +9,6 @@ enableRobotsTXT: true
 enableGitInfo: true
 disableKinds: ["taxonomy", "term"] 
 
-# Permalinks
-permalinks:
-  docs: '/docs/:filename/'
-
-# Params (custom site variables)
-params:
-  description: "Open-source infrastructure for peer meditation"
-  tagline: "Peer-led • Open-source • Collective coherence"
-  author: "DMN Community"
-  github: "https://github.com/reyblueroller/meditation-network"
-  contact: "contact@meditation-network.org"
-
-# Main menu (navigation)
 menu:
   main:
     - name: "Nodes"
@@ -30,18 +17,26 @@ menu:
     - name: "Mission"
       url: "/docs/mission/"
       weight: 2
-    - name: "Timer"          
-      url: "/timer/"          
-      weight: 3 
+    - name: "Timer"
+      url: "/timer/"
+      weight: 3
     - name: "Start a Node"
       url: "/docs/getting-started/"
       weight: 4
     - name: "About"
       url: "/docs/about/"
       weight: 5
-    - name: "Discussions"
-      url: "https://github.com/reyblueroller/meditation-network/discussions"
-      weight: 6
+
+# Permalinks
+permalinks:
+  docs: '/docs/:filename/'
+
+# Params (custom site variables)
+params:
+  author: "DMN Community"
+  github: "https://github.com/reyblueroller/meditation-network"
+  contact: "contact@meditation-network.org"
+
 
 # Markup settings
 markup:
