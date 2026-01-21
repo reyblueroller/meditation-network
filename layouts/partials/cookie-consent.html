@@ -1,9 +1,32 @@
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: var(--entry); border: 1px solid var(--border); padding: 20px; border-radius: 12px; z-index: 9999;">
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: var(--entry); border: 1px solid var(--border); padding: 20px; border-radius: 12px; z-index: 999999; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
     <p style="margin: 0 0 10px 0;">
-        {{ i18n "cookie_text" }} 
-        <a href="{{ "docs/mission" | relLangURL }}" style="color: #73baf0;">→</a>
+        {{ i18n "cookie_text" | default "We use data to measure collective coherence growth." }}
     </p>
     <button id="accept-cookies" style="background: #73baf0; color: #000; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-        {{ i18n "cookie_accept" }}
+        {{ i18n "cookie_accept" | default "Accept" }}
     </button>
 </div>
+
+<script>
+    (function() {
+        document.addEventListener("DOMContentLoaded", function() {
+            // Check localStorage
+            if (!localStorage.getItem('cookie-consent')) {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) banner.style.display = 'block';
+            }
+
+            // Handle button click
+            const btn = document.getElementById('accept-cookies');
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    localStorage.setItem('cookie-consent', 'true');
+                    document.getElementById('cookie-banner').style.display = 'none';
+                    // Reload is necessary if your GA4 script in the head 
+                    // is checking for this localStorage key on load.
+                    location.reload(); 
+                });
+            }
+        });
+    })();
+</script>
