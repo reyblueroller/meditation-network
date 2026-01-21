@@ -18,6 +18,8 @@ buildDrafts = false
     # Your chosen identity
     author = 'Infrastructure Builder'  
 
+    googleAnalytics = 'G-5HBMFY180N'
+
     [markup.tableOfContents]
     endLevel = 2   # Shows ## and ### headings
     startLevel = 2
@@ -61,6 +63,14 @@ buildDrafts = false
                 name = 'Join Network'
                 url = '/docs/getting-started'
                 weight = 3
+            [[languages.en.menu.footer]]
+                name = 'Privacy & Data Integrity'
+                url = '/privacy'
+                weight = 1
+            [[languages.en.menu.footer]]
+                name = 'Legal Notice'
+                url = '/legal'
+                weight = 2
     [languages.es]
         languageName = 'Es'
         contentDir = "content/es"

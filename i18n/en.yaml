@@ -241,3 +241,15 @@
 
 - id: home_values
   translation: "Peer-led • Open-source • Collective coherence."
+
+- id: privacy_title
+  translation: "Privacy & Data Integrity"
+
+- id: privacy_content
+  translation: |
+    ### Our Commitment
+    As an open-source infrastructure project, DMN prioritizes your privacy.
+    
+    * **Data Collection**: We use Google Analytics only to measure network growth and retention.
+    * **Anonymity**: No personal meditation data is stored on our servers.
+    * **Control**: You can revoke consent at any time by clearing your browser cookies.
