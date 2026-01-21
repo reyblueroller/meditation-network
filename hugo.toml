@@ -1,0 +1,72 @@
+baseURL = 'https://meditation-network.org'
+languageCode = 'en'
+title = 'Distributed Meditation Network'
+theme = 'PaperMod'
+
+copyright = '2026-2027 · Distributed Meditation Network'
+
+# General Settings
+enableRobotsTXT = true
+buildDrafts = false
+
+
+
+[params]
+    env = 'production'
+    title = 'DMN'
+    description = 'Establishing Peer-to-Peer Coherence for the 2027 Window'
+    # Your chosen identity
+    author = 'Infrastructure Builder'  
+
+    [markup.tableOfContents]
+    endLevel = 2   # Shows ## and ### headings
+    startLevel = 2
+
+    # Solar/Lunar Toggle & UI
+    defaultTheme = 'auto'
+    disableThemeToggle = false
+    ShowReadingTime = true
+    ShowShareButtons = false
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    
+    # Aesthetic Integrity: Lines & Curves
+    [params.assets]
+        disableHLJS = true # Keeps site lightweight and fast
+        favicon = '/images/logo.png'
+        apple_touch_icon = '/images/logo.png'
+
+    [params.label]
+        text = "DMN"
+        icon = "/images/logo.svg"
+        iconHeight = 35
+    
+# Multi-language Configuration (i18n)
+[languages]
+    [languages.en]
+        languageName = 'English'
+        contentDir = "content/en"
+        weight = 1
+        [languages.en.menu]
+            [[languages.en.menu.main]]
+                name = 'Deeper Purpose'
+                url = '/purpose'
+                weight = 1
+            [[languages.en.menu.main]]
+                name = 'Field Reports'
+                url = '/reports'
+                weight = 2
+            [[languages.en.menu.main]]
+                name = 'Join Network'
+                url = '/docs/getting-started'
+                weight = 3
+    [languages.es]
+        languageName = 'Es'
+        contentDir = "content/es"
+        weight = 2
+
+# Taxonomy for Grounding Content
+[taxonomies]
+    tag = 'tags'
+    category = 'categories'

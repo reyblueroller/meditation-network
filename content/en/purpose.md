@@ -1,11 +1,17 @@
-# DMN: Deeper Purpose
+---
+title: "Deeper Purpose"
+date: 2026-01-20
+slug: "purpose"
+showToc: true
+ShowReadingTime: true
+---
 
-> **Two perspectives available:**
-> - **[Evidence-Based Mission]({{< ref "mission.md" >}}):** Research, systems, measurable outcomes
-> - **This document:** Consciousness evolution, heart activation, timing significance
-> - **[See integration]({{< ref "comparison.md" >}}):** How both perspectives align
-> 
-> *Read what resonates. Both describe the same infrastructure.*
+**Two perspectives available:**
+- **[Evidence-Based Mission]({{< ref "mission.md" >}}):** Research, systems, measurable outcomes
+- **This document:** Consciousness evolution, heart activation, timing significance
+- **[See integration]({{< ref "comparison.md" >}}):** How both perspectives align
+
+*Read what resonates. Both describe the same infrastructure.*
 
 ---
 

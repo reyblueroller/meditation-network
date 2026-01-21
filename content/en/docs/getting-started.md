@@ -1,4 +1,9 @@
-# Getting Started with DMN
+---
+title: "Getting Started with DMN"
+date: 2026-01-20
+showToc: true
+ShowReadingTime: true
+---
 
 Two ways to participate in the Distributed Meditation Network:
 
@@ -257,7 +262,7 @@ Questions? Reply or DM.
 
 ### Philosophy
 - **[Mission (Evidence-Based)]({{< ref "mission.md" >}})** - Research perspective
-- **[Deeper Purpose (Consciousness)]({{< ref "deeper-purpose.md" >}})** - Spiritual perspective
+- **[Deeper Purpose (Consciousness)]({{< ref "purpose.md" >}})** - Spiritual perspective
 - **[Integration]({{< ref "comparison.md" >}})** - How they align
 
 ---

@@ -1,188 +1,97 @@
-{{ define "main" }}
-<section class="hero">
-    <h1>{{ i18n "homepage_title" }}</h1>
-    <p class="subtitle">{{ .Site.Params.description }}</p>
-    <p class="vision">{{ i18n "homepage_vision" }}</p>
-    <p class="tagline">{{ .Site.Params.tagline }}</p>
-</section>
-
-<section class="status-banner">
-    <div class="status-grid">
-        <div class="status-item">
-            <span class="status-label">{{ i18n "homepage_status_label" }}</span>
-            <span class="status-value">{{ i18n "homepage_status_value" }}</span>
-        </div>
-        <div class="status-item">
-            <span class="status-label">{{ i18n "homepage_phase_label" }}</span>
-            <span class="status-value">{{ i18n "homepage_phase_value" }}</span>
-        </div>
-        <div class="status-item">
-            <span class="status-label">{{ i18n "homepage_launch_label" }}</span>
-            <span class="status-value">{{ i18n "homepage_launch_value" }}</span>
-        </div>
-    </div>
-</section>
-
-<section class="vision-reality">
-    <h2>{{ i18n "homepage_how_title" }}</h2>
+{{- define "main" -}}
+    {{- partial "home_info.html" . -}}
     
-    <div class="two-column">
-        <div class="vision-col">
-            <h3>{{ i18n "homepage_vision_title" }}</h3>
-            <p><strong>{{ i18n "homepage_vision_subtitle" }}</strong></p>
-            <ul>
-                <li>{{ i18n "homepage_vision_nodes_2027" }}</li>
-                <li>{{ i18n "homepage_vision_nodes_2030" }}</li>
-                <li>{{ i18n "homepage_vision_sync" }}</li>
-                <li>{{ i18n "homepage_vision_infra" }}</li>
-            </ul>
-        </div>
-        
-        <div class="reality-col">
-            <h3>{{ i18n "homepage_reality_title" }}</h3>
-            <p><strong>{{ i18n "homepage_reality_subtitle" }}</strong></p>
-            <ul>
-                <li>{{ i18n "homepage_reality_week1" }}</li>
-                <li>{{ i18n "homepage_reality_month3" }}</li>
-                <li>{{ i18n "homepage_reality_year1" }}</li>
-                <li>{{ i18n "homepage_reality_year2" }}</li>
-            </ul>
-        </div>
-    </div>
+    <div class="command-center">
     
-    <p class="center-text"><strong>{{ i18n "homepage_building_public" }}</strong></p>
-</section>
+        <div class="countdown-container">
+            <div class="countdown-header">
+                <h3 class="column-label">{{ i18n "countdown_title" }}</h3>
+                <span class="info-trigger" title='{{ i18n "countdown_info" }}'>{{ i18n "countdown_info" }}</span>
+            </div>
+    
+            <div id="countdown-timer" class="timer-display">
+                <span id="days">000</span>d <span id="hours">00</span>h <span id="minutes">00</span>m <span id="seconds">00</span>s
+            </div>
+    
+            <p class="timer-subtext">{{ i18n "countdown_subtext" }}</p>
+        </div>
 
-<section class="current-nodes">
-    <h2>{{ i18n "homepage_nodes_title" }}</h2>
-    
-    <p class="center-text" style="margin-bottom: 2rem;">
-        <a href="{{ "nodes" | relLangURL }}" style="color: var(--color-accent); font-weight: 600;">
-            {{ i18n "homepage_view_directory" }} →
-        </a>
-    </p>
+        <div class="pixel-map-wrapper">
+            {{ partial "map.html" . }}
 
-    <div class="stats">
-        <div class="stat">
-            <span class="number">{{ len .Site.Data.nodes }}</span>
-            <span class="label">{{ i18n "nodes_title" }}{{ if ne (len .Site.Data.nodes) 1 }}s{{ end }}</span>
-        </div>
-    </div>
+            {{ $registeredNodes := .Site.Data.nodes }}
     
-    <div class="nodes-list">
-        {{ range .Site.Data.nodes }}
-        <div class="node-card status-{{ .status }}">
-            <h3>{{ .name }}</h3>
-            <p class="node-location">📍 {{ .location.city }}, {{ .location.country }}</p>
-            <p class="node-status">{{ i18n "nodes_status" }}: <span class="badge">{{ .status }}</span></p>
-            <p class="node-schedule">{{ .schedule.day }} {{ .schedule.time }} ({{ .schedule.timezone }})</p>
-            <p class="node-format">{{ i18n "homepage_format" }}: {{ .format | title }}</p>
-            {{ if .notes }}
-            <p class="node-notes">{{ .notes }}</p>
+            {{ range .Site.Data.map_locations }}
+                {{ $mapCity := . }}
+                {{ range $registeredNodes }}
+                    {{/* Lowercase both and trim spaces to force a match */}}
+                    {{ if eq (lower (trim .city " ")) (lower (trim $mapCity.city " ")) }}
+                        <div class="node-overlay" 
+                             style="{{ printf "top: %v%%; left: %v%%;" $mapCity.top $mapCity.left | safeCSS }}"
+                             title="{{ .name }} - {{ .status | upper }}">
+                        </div>
+                    {{ end }}
+                {{ end }}
             {{ end }}
-            <a href="{{ .contact.url }}" class="button">{{ i18n "homepage_contact_node" }}</a>
         </div>
-        {{ end }}
     </div>
-</section>
 
-<section class="two-lenses">
-    <h2>{{ i18n "homepage_lenses_title" }}</h2>
-    
-    <div class="two-column">
-        <div class="lens-card">
-            <h3>{{ i18n "homepage_lens_evidence_title" }}</h3>
-            <p>{{ i18n "homepage_lens_evidence_subtitle" }}</p>
-            <ul>
-                <li>{{ i18n "homepage_lens_evidence_1" }}</li>
-                <li>{{ i18n "homepage_lens_evidence_2" }}</li>
-                <li>{{ i18n "homepage_lens_evidence_3" }}</li>
-                <li>{{ i18n "homepage_lens_evidence_4" }}</li>
-            </ul>
-            <a href="{{ "docs/mission" | relLangURL }}" class="button">{{ i18n "homepage_read_mission" }}</a>
-        </div>
-        
-        <div class="lens-card">
-            <h3>{{ i18n "homepage_lens_consciousness_title" }}</h3>
-            <p>{{ i18n "homepage_lens_consciousness_subtitle" }}</p>
-            <ul>
-                <li>{{ i18n "homepage_lens_consciousness_1" }}</li>
-                <li>{{ i18n "homepage_lens_consciousness_2" }}</li>
-                <li>{{ i18n "homepage_lens_consciousness_3" }}</li>
-                <li>{{ i18n "homepage_lens_consciousness_4" }}</li>
-            </ul>
-            <a href="{{ "docs/deeper-purpose" | relLangURL }}" class="button">{{ i18n "homepage_read_deeper" }}</a>
-        </div>
-    </div>
-    
-    <p class="center-text">{{ i18n "homepage_lenses_footer" }} <a href="{{ "docs/comparison" | relLangURL }}">{{ i18n "homepage_see_alignment" }} →</a></p>
-</section>
+<script>
+    (function() {
+        const targetDate = new Date("January 1, 2027 00:00:00").getTime();
 
-<section class="get-involved">
-    <h2>{{ i18n "homepage_involved_title" }}</h2>
-    
-    <div class="three-column">
-        <div class="cta-card">
-            <h3>{{ i18n "homepage_join_sydney_title" }}</h3>
-            <p>{{ i18n "homepage_join_sydney_text" }}</p>
-            <p class="detail">{{ i18n "homepage_join_sydney_detail" }}</p>
-            <a href="https://github.com/reyblueroller/meditation-network/discussions/categories/node-inquiries" class="button">{{ i18n "homepage_contact_node" }}</a>
-        </div>
-        
-        <div class="cta-card">
-            <h3>{{ i18n "homepage_start_node_title" }}</h3>
-            <p>{{ i18n "homepage_start_node_text" }}</p>
-            <p class="detail">{{ i18n "homepage_start_node_detail" }}</p>
-            <a href="{{ "docs/getting-started" | relLangURL }}" class="button">{{ i18n "get_started" }}</a>
-        </div>
-        
-        <div class="cta-card">
-            <h3>{{ i18n "homepage_contribute_title" }}</h3>
-            <p>{{ i18n "homepage_contribute_text" }}</p>
-            <p class="detail">{{ i18n "homepage_contribute_detail" }}</p>
-            <a href="{{ .Site.Params.github }}" class="button">{{ i18n "homepage_view_github" }}</a>
-        </div>
-    </div>
-</section>
+        const timerFunc = function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
 
-<section class="start-small">
-    <h2>{{ i18n "homepage_movements_title" }}</h2>
-    
-    <div class="timeline">
-        <div class="timeline-item">
-            <span class="timeline-time">{{ i18n "homepage_timeline_week1_time" }}</span>
-            <span class="timeline-desc">{{ i18n "homepage_timeline_week1_desc" }}</span>
+            if (distance < 0) {
+                document.getElementById("countdown-timer").innerHTML = "WINDOW ACTIVE";
+                return;
+            }
+
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(3, '0');
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+        };
+
+        setInterval(timerFunc, 1000);
+        timerFunc(); // Initial call
+    })();
+</script>
+
+    <div class="registry-grid">
+        
+        <div class="col-left">
+           <h3 class="column-label">Field Reports</h3>
+            {{/* Try targeting the section specifically by its object */}}
+            {{ range (where .Site.RegularPages "Section" "reports") }}
+            <article class="post-entry">
+                <header class="entry-header">
+                    <h2>{{ .Title }}</h2>
+                </header>
+                <div class="entry-content">
+                    <p>{{ .Summary | truncate 120 }}</p>
+                </div>
+                <a class="entry-link" href="{{ .Permalink }}"></a>
+            </article>
+            {{ end }}
         </div>
-        <div class="timeline-item">
-            <span class="timeline-time">{{ i18n "homepage_timeline_week4_time" }}</span>
-            <span class="timeline-desc">{{ i18n "homepage_timeline_week4_desc" }}</span>
-        </div>
-        <div class="timeline-item">
-            <span class="timeline-time">{{ i18n "homepage_timeline_week12_time" }}</span>
-            <span class="timeline-desc">{{ i18n "homepage_timeline_week12_desc" }}</span>
-        </div>
-        <div class="timeline-item">
-            <span class="timeline-time">{{ i18n "homepage_timeline_month6_time" }}</span>
-            <span class="timeline-desc">{{ i18n "homepage_timeline_month6_desc" }}</span>
-        </div>
-        <div class="timeline-item">
-            <span class="timeline-time">{{ i18n "homepage_timeline_year1_time" }}</span>
-            <span class="timeline-desc">{{ i18n "homepage_timeline_year1_desc" }}</span>
+
+        <div class="col-right">
+            <h3 class="column-label">System Protocols</h3>
+            {{ range (where .Site.RegularPages "Section" "docs") }}
+            <article class="post-entry">
+                <header class="entry-header">
+                    <h2>{{ .Title }}</h2>
+                </header>
+                <div class="entry-content">
+                    <p>{{ .Summary | truncate 120 }}</p>
+                </div>
+                <a class="entry-link" href="{{ .Permalink }}"></a>
+            </article>
+            {{ end }}
         </div>
     </div>
     
-    <p class="center-text"><strong>{{ i18n "homepage_sydney_started" }}</strong></p>
-    
-    <div class="start-contexts">
-        <h3>{{ i18n "homepage_start_where_title" }}</h3>
-        <div class="contexts-grid">
-            <div>{{ i18n "homepage_context_family" }}</div>
-            <div>{{ i18n "homepage_context_friends" }}</div>
-            <div>{{ i18n "homepage_context_workplace" }}</div>
-            <div>{{ i18n "homepage_context_neighborhood" }}</div>
-            <div>{{ i18n "homepage_context_virtual" }}</div>
-            <div>{{ i18n "homepage_context_solo" }}</div>
-        </div>
-    </div>
-</section>
-{{ end }}
+{{- end -}}

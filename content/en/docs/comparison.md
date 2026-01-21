@@ -1,9 +1,10 @@
 ---
 title: "Two Perspectives, One Infrastructure"
 description: "Visual integration of evidence and consciousness views"
+showToc: true
+ShowReadingTime: true
 ---
 
-# Two Perspectives, One Infrastructure
 
 <div style="max-width: 800px; margin: 2rem auto;">
   <svg viewBox="0 0 800 600" style="width: 100%; height: auto;" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +75,7 @@ Choose the perspective that speaks to you:
 
 **🔬 [Evidence-Based Mission]({{< ref "mission.md" >}})** - Research, distributed systems, collective coherence data
 
-**✨ [Consciousness-Based Purpose]({{< ref "deeper-purpose.md" >}})** - Heart activation, soul mission, planetary timing
+**✨ [Consciousness-Based Purpose]({{< ref "purpose.md" >}})** - Heart activation, soul mission, planetary timing
 
 **Or read both.** They're complementary, not contradictory.
 

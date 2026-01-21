@@ -1,0 +1,25 @@
+<div class="countdown-container">
+    <h2 class="countdown-title">Stabilization Window Countdown</h2>
+    <div id="countdown-timer" class="timer-display">
+        <span id="days">000</span>d <span id="hours">00</span>h <span id="minutes">00</span>m <span id="seconds">00</span>s
+    </div>
+</div>
+
+<script>
+    const targetDate = new Date("January 1, 2027 00:00:00").getTime();
+
+    const updateTimer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(3, '0');
+        document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+        document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+        document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+
+        if (distance < 0) {
+            clearInterval(updateTimer);
+            document.getElementById("countdown-timer").innerHTML = "WINDOW ACTIVE";
+        }
+    }, 1000);
+</script>

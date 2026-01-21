@@ -1,0 +1,84 @@
+/* --- 1. Map Container Scaling --- */
+.pixel-map-wrapper {
+    width: 100% !important;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Force the SVG to fill its container */
+.map-pixel-svg {
+    position: relative;
+    z-index: 2; /* The map stays in the middle */
+    width: 100% !important;
+    height: auto !important;
+    max-height: 500px;
+}
+
+/* --- 2. Landmass Color Control --- */
+/* Target 'circle' if the pixel map uses dots, or 'path' if it uses squares */
+.map-pixel-svg path, 
+.map-pixel-svg circle {
+    fill: #3a4039 !important; /* Default Dark Mode (Grounded Sage) */
+    transition: fill 0.3s ease-in-out;
+}
+
+/* Light Mode Overrides */
+[data-theme='light'] .map-pixel-svg path,
+[data-theme='light'] .map-pixel-svg circle {
+    fill: #d0d6cf !important; /* Light Mode (Cement Slate) */
+}
+
+/* --- 3. Attribution Purge --- */
+/* CSS safety net to hide any remaining logo elements */
+.map-pixel-svg g[role="presentation"],
+.map-pixel-svg image,
+.map-pixel-svg text {
+    display: none !important;
+}
+
+/* --- Global Map Node Pulse --- */
+.node-overlay {
+    position: absolute;
+    z-index: 999 !important; /* Force nodes to the very top */
+    pointer-events: auto;
+    width: 10px;
+    height: 10px;
+    background: #8fb38d; /* Sage Green */
+    border-radius: 50%;
+    box-shadow: 0 0 15px #8fb38d;
+    pointer-events: none; /* Prevents interference with map clicks */
+    animation: map-node-pulse 2.5s infinite ease-in-out;
+}
+
+.pixel-map-wrapper {
+    position: relative; /* Ensure this is the coordinate parent */
+    z-index: 1;
+}
+
+
+
+/* Light Mode Contrast Adjustment */
+[data-theme='light'] .node-overlay {
+    background: #4a7a48; /* Darker Green for visibility on light grey */
+    box-shadow: 0 0 8px rgba(115, 186, 240, 0.4);
+}
+
+
+@keyframes map-node-pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(2.2);
+        opacity: 0;
+        box-shadow: 0 0 25px #8fb38d;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+}

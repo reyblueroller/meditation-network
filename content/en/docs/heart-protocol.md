@@ -1,4 +1,9 @@
-# Heart Protocol
+---
+title: "Heart Protocol"
+date: 2026-01-20
+showToc: true
+ShowReadingTime: true
+---
 
 The Heart Protocol is the core meditation practice of the Distributed Meditation Network.
 

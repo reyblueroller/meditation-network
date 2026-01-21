@@ -1,0 +1,191 @@
+
+/* ==========================================================================
+   1. CORE INFRASTRUCTURE (Layout & Grid)
+   ========================================================================== */
+.main {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 25px !important;
+}
+
+@media screen and (min-width: 900px) {
+    .registry-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 50px !important;
+        align-items: start !important;
+        margin-top: 3.5rem !important;
+    }
+}
+
+/* ==========================================================================
+   2. DARK THEME (The Grounded Registry)
+   ========================================================================== */
+:root {
+    --theme: #1a1c1e !important;
+    --entry: #242729 !important;
+    --primary: #c5e0c1 !important;   /* High-intensity Sage */
+    --secondary: #a3b8a1 !important; /* Mossy green */
+    --tertiary: #7d917b !important;  /* Distinct Olive */
+    --border: #3a4039 !important;
+}
+
+/* ==========================================================================
+   3. LIGHT THEME (High-Contrast Day Stabilization)
+   ========================================================================== */
+
+/* This targets the <html> data-theme attribute directly */
+[data-theme='light'] {
+    --theme: #f4f5f3 !important;     /* Cement-grey background */
+    --entry: transparent !important; /* Forces no card background */
+    --primary: #2d332d !important;   /* Deep Slate - NEAR BLACK for readability */
+    --secondary: #4a524a !important; /* Grounded Charcoal-Olive */
+    --tertiary: #6b756a !important;  /* Muted slate for labels */
+    --border: #d0d6cf !important;    /* Defined light borders */
+}
+
+/* Force Card Transparency & Text Visibility in Light Mode */
+[data-theme='light'] .post-entry {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: none !important;
+}
+
+/* Fix Washed-out Navigation and Headings */
+[data-theme='light'] .header, 
+[data-theme='light'] .nav a,
+[data-theme='light'] h1, 
+[data-theme='light'] h2,
+[data-theme='light'] .column-label {
+    color: var(--primary) !important;
+    opacity: 1 !important;
+}
+
+/* ==========================================================================
+   4. COMPONENT STYLING (Cards & Typography)
+   ========================================================================== */
+.column-label {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--tertiary);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.post-entry {
+    background: var(--entry) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    margin-bottom: 20px !important;
+    transition: transform 0.25s ease;
+}
+
+.post-entry h2 {
+    color: var(--primary) !important;
+    font-weight: 700 !important; /* Increased weight for visibility */
+}
+
+.post-entry .entry-content {
+    color: var(--secondary) !important;
+    font-size: 0.95rem;
+    opacity: 1 !important;
+}
+
+/* ==========================================================================
+   5. LIVE NODE INDICATOR (Heartbeat)
+   ========================================================================== */
+.col-left .post-entry:first-of-type {
+    border-left: 4px solid #8fb38d !important;
+    position: relative;
+}
+
+.col-left .post-entry:first-of-type::before {
+    content: "● LIVE";
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: #b1e0ad;
+    letter-spacing: 2px;
+    animation: pulse 3s infinite;
+}
+
+/* Light Mode Pulse Color Adjustment */
+[data-theme='light'] .col-left .post-entry:first-of-type::before {
+    color: #4a7a48 !important; /* Darker green for visibility */
+    text-shadow: none !important;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 0.2; }
+    100% { opacity: 0.8; }
+}
+
+/* Center the entire Header block */
+.home-info-center {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.home-info-center h1 {
+    font-size: 2.8rem;
+    color: #73baf0; /* Title Blue */
+    margin-bottom: 20px;
+}
+
+.mission-primary {
+    font-size: 1.2rem;
+    margin-bottom: 10px !important;
+}
+
+.mission-pillars {
+    font-family: var(--font-mono, monospace);
+    font-size: 1rem;
+    color: var(--secondary);
+    opacity: 0.8;
+    margin-bottom: 15px !important;
+}
+
+.mission-values {
+    color: #a27de3; /* Purple theme color */
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Center the Map and Countdown too */
+.command-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Minimalist Logo Styling */
+.logo img {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-right: 10px;
+    /* Soft blue glow to match the map nodes */
+    filter: drop-shadow(0 0 4px rgba(115, 186, 240, 0.7));
+}
+
+/* Ensure 'DMN' text is vertically aligned with the icon */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+

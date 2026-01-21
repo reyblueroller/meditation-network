@@ -1,0 +1,26 @@
+<script>
+    // Wait for the entire page and theme scripts to finish loading
+    window.onload = function() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const id = this.getAttribute('href').substr(1);
+                // Decode URI to handle IDs with special characters/spaces
+                const target = document.querySelector(`[id='${decodeURIComponent(id)}']`);
+                
+                if (target) {
+                    // Force the scroll with a small delay to bypass theme resets
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: target.offsetTop - 120, // Offset for your header
+                            behavior: 'smooth'
+                        });
+                    }, 10);
+                    
+                    // Update URL hash without jumping
+                    history.pushState(null, null, `#${id}`);
+                }
+            });
+        });
+    };
+</script>

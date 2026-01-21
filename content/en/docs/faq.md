@@ -1,4 +1,9 @@
-# Frequently Asked Questions
+---
+title: "Frequently Asked Questions"
+date: 2026-01-20
+showToc: true
+ShowReadingTime: true
+---
 
 ## General Questions
 

@@ -221,4 +221,23 @@
 - id: homepage_context_solo
   translation: "🧘 **Solo:** Just you (valid node!)"
 
- 
+- id: countdown_title
+  translation: "System Readiness: 2027 Window"
+
+- id: countdown_info
+  translation: "The 2027 Window is the target date for achieving global peer-to-peer coherence across all registered nodes."
+
+- id: countdown_subtext
+  translation: "Remaining until Network Synchronization Phase"
+
+- id: home_title
+  translation: "Distributed Meditation Network"
+
+- id: home_subtitle
+  translation: "Open-source infrastructure for peer meditation."
+
+- id: home_pillars
+  translation: "Think Global • Start Small • Build Together."
+
+- id: home_values
+  translation: "Peer-led • Open-source • Collective coherence."

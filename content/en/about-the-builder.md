@@ -1,6 +1,9 @@
 ---
 title: "About the Builder"
 description: "Infrastructure engineer building DMN"
+date: 2026-01-20
+author: "Infrastructure Builder"
+weight: 1
 ---
 
 # About the Builder

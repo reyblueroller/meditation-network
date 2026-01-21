@@ -1,0 +1,145 @@
+# --- North America ---
+- city: "San Francisco"
+  top: 38
+  left: 14
+- city: "Los Angeles"
+  top: 42
+  left: 15
+- city: "Vancouver"
+  top: 32
+  left: 15.5
+- city: "New York"
+  top: 35
+  left: 24.5
+- city: "Chicago"
+  top: 35
+  left: 21
+- city: "Toronto"
+  top: 33
+  left: 23
+- city: "Mexico City"
+  top: 52
+  left: 20
+
+# --- South America ---
+- city: "São Paulo"
+  top: 72
+  left: 33
+- city: "Buenos Aires"
+  top: 82
+  left: 31
+- city: "Bogotá"
+  top: 55
+  left: 26
+- city: "Lima"
+  top: 65
+  left: 25
+- city: "Santiago"
+  top: 80
+  left: 27
+
+# --- Europe ---
+- city: "London"
+  top: 29
+  left: 48.5
+- city: "Paris"
+  top: 31
+  left: 49.5
+- city: "Berlin"
+  top: 28
+  left: 51.5
+- city: "Madrid"
+  top: 36
+  left: 47.5
+- city: "Rome"
+  top: 34
+  left: 52
+- city: "Amsterdam"
+  top: 28
+  left: 50
+- city: "Stockholm"
+  top: 18
+  left: 54
+- city: "Istanbul"
+  top: 35
+  left: 57
+- city: "Moscow"
+  top: 22
+  left: 60
+
+# --- Africa ---
+- city: "Cairo"
+  top: 42
+  left: 56
+- city: "Lagos"
+  top: 58
+  left: 49
+- city: "Nairobi"
+  top: 60
+  left: 58
+- city: "Johannesburg"
+  top: 78
+  left: 55
+- city: "Casablanca"
+  top: 40
+  left: 46
+
+# --- Middle East & Central Asia ---
+- city: "Dubai"
+  top: 44
+  left: 62
+- city: "Riyadh"
+  top: 46
+  left: 60
+- city: "Tel Aviv"
+  top: 40
+  left: 56.5
+- city: "Tehran"
+  top: 38
+  left: 62.5
+
+# --- Asia ---
+- city: "Tokyo"
+  top: 37
+  left: 88
+- city: "Seoul"
+  top: 36
+  left: 85
+- city: "Beijing"
+  top: 32
+  left: 81
+- city: "Shanghai"
+  top: 40
+  left: 83
+- city: "Hong Kong"
+  top: 47
+  left: 81
+- city: "Singapore"
+  top: 61
+  left: 80
+- city: "Bangkok"
+  top: 53
+  left: 77
+- city: "Mumbai"
+  top: 51
+  left: 70
+- city: "New Delhi"
+  top: 43
+  left: 72
+- city: "Jakarta"
+  top: 67
+  left: 80
+- city: "Manila"
+  top: 53
+  left: 85
+
+# --- Oceania ---
+- city: "Sydney"
+  top: 86.1
+  left: 86.3
+- city: "Melbourne"
+  top: 85
+  left: 85
+- city: "Auckland"
+  top: 84
+  left: 93

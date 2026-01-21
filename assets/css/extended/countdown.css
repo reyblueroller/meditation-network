@@ -1,0 +1,42 @@
+
+/* --- Timer & Map Layout --- */
+.countdown-container {
+    text-align: center;
+    margin: 2rem 0 4rem;
+    padding: 2rem;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.timer-display {
+    font-family: var(--font-mono, monospace);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.map-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.map-svg {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    filter: sepia(0.2) saturate(0.8); /* Gives the map that 'Grounded' tone */
+}
+
+/* Map Node Glow */
+.node-point {
+    fill: #8fb38d;
+    animation: node-pulse 2s infinite;
+}
+
+@keyframes node-pulse {
+    0% { r: 3; opacity: 1; }
+    50% { r: 6; opacity: 0.5; }
+    100% { r: 3; opacity: 1; }
+}
+
