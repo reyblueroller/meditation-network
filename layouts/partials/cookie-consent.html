@@ -1,32 +1,57 @@
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: var(--entry); border: 1px solid var(--border); padding: 20px; border-radius: 12px; z-index: 999999; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-    <p style="margin: 0 0 10px 0;">
-        {{ i18n "cookie_text" | default "We use data to measure collective coherence growth." }}
-    </p>
-    <button id="accept-cookies" style="background: #73baf0; color: #000; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-        {{ i18n "cookie_accept" | default "Accept" }}
-    </button>
+<div id="cookie-notice" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--theme); border-top: 1px solid var(--border); padding: 1rem; z-index: 9999; text-align: center;">
+    <span>{{ i18n "cookie_text" | default "We use data to measure network coherence." }}</span>
+    <div style="margin-top: 10px;">
+        <a id="cookie-notice-accept" style="cursor: pointer; color: #73baf0; margin: 0 15px; font-weight: bold;">{{ i18n "cookie_accept" | default "Accept" }}</a>
+        <a id="cookie-notice-deny" style="cursor: pointer; color: var(--secondary); margin: 0 15px;">{{ i18n "cookie_deny" | default "Deny" }}</a>
+    </div>
 </div>
 
 <script>
-    (function() {
-        document.addEventListener("DOMContentLoaded", function() {
-            // Check localStorage
-            if (!localStorage.getItem('cookie-consent')) {
-                const banner = document.getElementById('cookie-banner');
-                if (banner) banner.style.display = 'block';
-            }
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
 
-            // Handle button click
-            const btn = document.getElementById('accept-cookies');
-            if (btn) {
-                btn.addEventListener('click', function() {
-                    localStorage.setItem('cookie-consent', 'true');
-                    document.getElementById('cookie-banner').style.display = 'none';
-                    // Reload is necessary if your GA4 script in the head 
-                    // is checking for this localStorage key on load.
-                    location.reload(); 
-                });
-            }
-        });
-    })();
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    if(readCookie('cookie-notice-option') == 'true') {
+        // LOAD GOOGLE ANALYTICS HERE
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}';
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ .Site.Params.googleAnalytics }}');
+
+    } else if (readCookie('cookie-notice-option') != 'false'){
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
+
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-option','true',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
+    document.getElementById('cookie-notice-deny').addEventListener("click",function() {
+        createCookie('cookie-notice-option','false',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+    });
 </script>
