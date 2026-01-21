@@ -253,3 +253,15 @@
     * **Data Collection**: We use Google Analytics only to measure network growth and retention.
     * **Anonymity**: No personal meditation data is stored on our servers.
     * **Control**: You can revoke consent at any time by clearing your browser cookies.
+
+- id: cookie_text
+  translation: "To measure collective coherence growth, we use anonymous analytics to track network stability leading up to 2027."
+
+- id: cookie_accept
+  translation: "Synchronize"
+
+- id: cookie_deny
+  translation: "Decline"
+
+- id: cookie_policy
+  translation: "Privacy & Data Integrity"
