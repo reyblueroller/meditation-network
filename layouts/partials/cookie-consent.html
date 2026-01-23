@@ -1,22 +1,12 @@
-<div id="cookie-notice" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--theme); border-top: 1px solid var(--border); padding: 1rem; z-index: 9999; text-align: center;">
-    <span>{{ i18n "cookie_text" | default "We use data to measure network coherence." }}</span>
-    <div style="margin-top: 10px;">
-        <a id="cookie-notice-accept" style="cursor: pointer; color: #73baf0; margin: 0 15px; font-weight: bold;">{{ i18n "cookie_accept" | default "Accept" }}</a>
-        <a id="cookie-notice-deny" style="cursor: pointer; color: var(--secondary); margin: 0 15px;">{{ i18n "cookie_deny" | default "Deny" }}</a>
+<div id="cookie-notice" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #1a1a1a; border-top: 1px solid #333; padding: 1.5rem; z-index: 9999; text-align: center; color: white;">
+    <span>{{ i18n "cookie_text" | default "We use anonymous signals to measure network coherence." }}</span>
+    <div style="margin-top: 15px;">
+        <button id="cookie-notice-accept" style="cursor: pointer; background: #73baf0; color: black; border: none; padding: 8px 20px; font-weight: bold; border-radius: 4px; margin: 0 10px;">{{ i18n "cookie_accept" | default "Accept" }}</button>
+        <button id="cookie-notice-deny" style="cursor: pointer; background: transparent; color: #999; border: 1px solid #444; padding: 8px 20px; border-radius: 4px; margin: 0 10px;">{{ i18n "cookie_deny" | default "Deny" }}</button>
     </div>
 </div>
 
 <script>
-    function createCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
-
     function readCookie(name) {
         var nameEQ = name + "=";
         var ca = document.cookie.split(';');
@@ -28,30 +18,23 @@
         return null;
     }
 
-    if(readCookie('cookie-notice-option') == 'true') {
-        // LOAD GOOGLE ANALYTICS HERE
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}';
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ .Site.Params.googleAnalytics }}');
-
-    } else if (readCookie('cookie-notice-option') != 'false'){
+    // Check for existing choice
+    var consentChoice = readCookie('cookie-notice-option');
+    if (consentChoice === 'true') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': 'granted' });
+    } else if (consentChoice === null) {
         document.getElementById('cookie-notice').style.display = 'block';
     }
 
-    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-        createCookie('cookie-notice-option','true',31);
+    // Event Listeners for buttons
+    document.getElementById('cookie-notice-accept').addEventListener("click", function() {
+        document.cookie = "cookie-notice-option=true; max-age=2678400; path=/";
+        gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': 'granted' });
         document.getElementById('cookie-notice').style.display = 'none';
-        location.reload();
     });
 
-    document.getElementById('cookie-notice-deny').addEventListener("click",function() {
-        createCookie('cookie-notice-option','false',31);
+    document.getElementById('cookie-notice-deny').addEventListener("click", function() {
+        document.cookie = "cookie-notice-option=false; max-age=2678400; path=/";
         document.getElementById('cookie-notice').style.display = 'none';
     });
 </script>

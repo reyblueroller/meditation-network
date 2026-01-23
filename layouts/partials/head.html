@@ -1,4 +1,5 @@
 {{- if hugo.IsProduction }}
+    {{ partial "analytics.html" . }}
     {{- partial "cookie-consent.html" . -}}
 {{- end }}
 <meta charset="utf-8">
